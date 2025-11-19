@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+
+
+
+<!-- Animated Hero Section Start -->
+
+
+<section class="hero_with_imgs">
+
+  <!-- Hero Slides -->
+  <img src="img/Hero image new.png" class="hero-slide active">
+  <img src="img/Hero Image New2.png" class="hero-slide">
+  <img src="img/Sixteen Foundation Hero section image 5.png" class="hero-slide">
+
+  <!-- Overlay -->
+  <div class="hero-overlay"></div> 
+
+  <!-- Hero Text Container -->
+  <div class="hero-text-container">
+    <div class="hero-text">
+      <h1>Empowering <br> Lives Through <br> Education</h1>
+      <p>A world where <br> every child can <br> learn, grow and thrive.</p>
+      <a href="Events.html" class="hero-btn">Donate Now</a>
+    </div>
+  </div>
+
+  <style>
+    .hero_with_imgs {
+      position: relative;
+      height: 600px;
+      overflow: hidden;
+    }
+
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.55);
+      z-index: 1;
+    }
+
+    /* Centered container for max-width 1200px */
+    .hero-text-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      z-index: 2;
+      display: flex;
+      justify-content: left; 
+      max-width: 1200px;
+    }
+
+    /* Actual text block */
+    .hero-text {
+      max-width: 1200px;    /* limit text width */
+      text-align: left;      /* left-align text inside container */
+      padding: 0 10px;
+      color: #fff;
+    }
+
+    .hero-text h1 {
+      font-size: 50px;
+      line-height: 1.2;
+      margin-bottom: 25px;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    .hero-text p {
+      font-size: 22px;
+      line-height: 1.6;
+      margin-bottom: 35px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 18px 40px;
+      background-color: #0B3857;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 50px;
+      /* border: 2px solid #ffffff; */
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .hero-text h1 { font-size: 40px; }
+      .hero-text p { font-size: 18px; }
+      .hero-btn { font-size: 16px; padding: 15px 35px; }
+    }
+
+    @media (max-width: 767px) {
+      .hero_with_imgs { height: 700px; }
+      .hero-text h1 { font-size: 32px; }
+      .hero-text p { font-size: 16px; }
+      .hero-btn { font-size: 14px; padding: 12px 30px; }
+    }
+
+    @media (min-width:1600px) {
+      .hero_with_imgs { height: 900px; }
+    }
+  </style>
+
+  <script>
+    const slides = document.querySelectorAll('.hero-slide');
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000);
+  </script>
+
+</section>
+
+
+
+<!-- Animated Hero Section Stop -->
+
+
+
+
+<!-- Home Page Events display Section Start -->
+
+
+<section class="home_pg_event_display_section1">
+  <div class="home_pg_event_display_section2">
+    <h2 class="home_pg_event_display_section3">Upcoming Events</h2>
+    <div class="home_pg_event_display_section4">
+
+      <!-- Event Card 1 -->
+      <!-- <div class="home_pg_event_display_section5">
+        <div class="home_pg_event_display_section6">
+          <img src="img/goals for gaza1.jpg" alt="Food Drive Event" class="home_pg_event_display_section7">
+        </div>
+        <h3 class="home_pg_event_display_section8">Goals for Gaza 2025</h3>
+        <p class="home_pg_event_display_section9"><i class="fa-solid fa-calendar-days"></i> August 16, 2025</p>
+        <p class="home_pg_event_display_section10"><i class="fa-solid fa-location-dot"></i> London, UK</p>
+        <p class="home_pg_event_display_section11">
+          Join us in distributing food packages to underprivileged families. Volunteers and donations are welcome!
+        </p>
+        <a href="Goals-for-Gaza-2025.html" class="home_pg_event_display_section12">Learn More</a>
+      </div> -->
+
+      <!-- Event Card 2 -->
+      <!-- <div class="home_pg_event_display_section5">
+        <div class="home_pg_event_display_section6">
+          <img src="img/Totes 4 Textbooks 2025.jpg" alt="Blood Donation Camp" class="home_pg_event_display_section7">
+        </div>
+        <h3 class="home_pg_event_display_section8">Totes 4 Textbooks 2025</h3>
+        <p class="home_pg_event_display_section9"><i class="fa-solid fa-calendar-days"></i> August 3</p>
+        <p class="home_pg_event_display_section10"><i class="fa-solid fa-location-dot"></i> London, UK</p>
+        <p class="home_pg_event_display_section11">
+          A life-saving initiative where you can donate blood and help save lives in hospitals across the region.
+        </p>
+        <a href="Totes-4-Textbooks-2025.html" class="home_pg_event_display_section12">Learn More</a>
+      </div> -->
+
+      <!-- Event Card 3 -->
+      <!-- <div class="home_pg_event_display_section5">
+        <div class="home_pg_event_display_section6">
+          <img src="img/event3.jpg" alt="Winter Clothing Drive" class="home_pg_event_display_section7">
+        </div>
+        <h3 class="home_pg_event_display_section8">10k Fun Run 2023</h3>
+        <p class="home_pg_event_display_section9"><i class="fa-solid fa-calendar-days"></i> August 20, 2023</p>
+        <p class="home_pg_event_display_section10"><i class="fa-solid fa-location-dot"></i> London, UK</p>
+        <p class="home_pg_event_display_section11">
+          Help us collect and distribute warm clothes to those in need during the winter season.
+        </p>
+        <a href="10K-Fun-Run-2023.html" class="home_pg_event_display_section12">Learn More</a>
+      </div> -->
+
+
+
+      <div class="home_pg_event_display_section5">
+        <div class="home_pg_event_display_section6">
+          <img src="img/Treat an iftar Hero Image.png" alt="Food Drive Event" class="home_pg_event_display_section7">
+        </div>
+        <h3 class="home_pg_event_display_section8">Treat an Iftar 2026</h3>
+        <p class="home_pg_event_display_section9"><i class="fa-solid fa-calendar-days"></i> February 21, 2026</p>
+        <p class="home_pg_event_display_section10"><i class="fa-solid fa-location-dot"></i> London, UK</p>
+        <p class="home_pg_event_display_section11">
+          Join us in distributing food packages to underprivileged families. Volunteers and donations are welcome!
+        </p>
+        <a href="Order-Iftar.html" class="home_pg_event_display_section12">Pre Order Now</a>
+      </div>
+
+
+      <div class="home_pg_event_display_section5">
+        <div class="home_pg_event_display_section6">
+          <img src="img/Summer event 2026 snowdon climb 481 by 320 .png" alt="Food Drive Event" class="home_pg_event_display_section7">
+        </div>
+        <h3 class="home_pg_event_display_section8">Summer Events 2026- Snowdon Climb</h3>
+        <p class="home_pg_event_display_section9"><i class="fa-solid fa-calendar-days"></i> August 16, 2025</p>
+        <p class="home_pg_event_display_section10"><i class="fa-solid fa-location-dot"></i> London, UK</p>
+        <p class="home_pg_event_display_section11">
+          Join us in this event of climbing mountains & share a memory together with our family & friends!
+        </p>
+        <a href="" class="home_pg_event_display_section12">Join Us</a>
+      </div>
+
+
+      <div class="home_pg_event_display_section5">
+        <div class="home_pg_event_display_section6">
+          <img src="img/No Event image.png" alt="Food Drive Event" class="home_pg_event_display_section7">
+        </div>
+        <h3 class="home_pg_event_display_section8">No Event </h3>
+        <p class="home_pg_event_display_section9"><i class="fa-solid fa-calendar-days"></i> No Date</p>
+        <p class="home_pg_event_display_section10"><i class="fa-solid fa-location-dot"></i> No place</p>
+        <p class="home_pg_event_display_section11">
+          No events currently will be added as soon as we publish!
+        </p>
+        <a href="" class="home_pg_event_display_section12">Learn More</a>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <div class="home_pg_event_sec_more_button_wrapper">
+    <a href="Events.html">
+      <button class="home_pg_event_sec_more_button">View Events</button>
+    </a>
+</div>
+
+
+
+</section>
+
+
+<!-- Home Page Events display Section End -->
+
+
+
+
+
+
+
+<!-- What we do section start -->
+
+<!-- <section class="what-we-do-hero-section">
+  <div class="what-we-do-container">
+    <div class="what-we-do-wrapper">
+
+    
+      <div class="what-we-do-text">
+        
+        <h2 class="what-we-do-title">Together, We Make <br>A Difference!</h2>
+        <p class="what-we-do-description">
+          Charitable giving as a religious act or duty is referred to as alms. 
+          The name stems from the most obvious expression of the virtue of charity, 
+          giving the recipients of it the means they need to survive.
+        </p>
+        <a href="Donation.html" class="what-we-do-btn">Make a Donation</a>
+      </div>
+
+      
+      <div class="what-we-do-image-collage">
+        <div class="what-we-do-image-item">
+          <img src="img/Al zikran school.jpg" alt="Al zikran school">
+        </div>
+        <div class="what-we-do-image-item">
+          <img src="img/Madrasha Mauritania.jpg" alt="Volunteers">
+        </div>
+        <div class="what-we-do-image-item">
+          <img src="img/Apex Secondary School.jpg" alt="Education Matters">
+        </div>
+        <div class="what-we-do-image-item">
+          <img src="img/DarulIrfanCause-400x300.jpg" alt="Education Matters">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+   
+    .what-we-do-hero-section {
+      padding: 80px 20px;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+      background-color: #f5f5f5;
+    }
+
+    .what-we-do-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+   
+    .what-we-do-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    
+    .what-we-do-text {
+      text-align: left;
+    }
+
+    .what-we-do-subheading {
+      display: inline-block;
+      color: #0B3857;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 15px;
+    }
+
+    .what-we-do-title {
+      font-size: 48px;
+      font-weight: 700;
+      color: #0B3857;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .what-we-do-description {
+      font-size: 18px;
+      color: #000000;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .what-we-do-btn {
+
+      display: inline-block;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, #0B3857, #0B3857);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      border: 2px solid #ffffff;
+    }
+
+    
+ 
+    .what-we-do-image-collage {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .what-we-do-image-item {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(1, 12, 11, 0.15);
+      flex-shrink: 0;
+    }
+
+    .what-we-do-image-item:hover {
+      transform: scale(1.05);
+    }
+
+    .what-we-do-image-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    
+    @media (max-width: 1024px) {
+      .what-we-do-image-item {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .what-we-do-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .what-we-do-title {
+        font-size: 36px;
+      }
+
+      .what-we-do-image-collage {
+        flex-wrap: nowrap;             
+        overflow-x: auto;              
+        gap: 20px;                 
+        -webkit-overflow-scrolling: touch; 
+      }
+
+      .what-we-do-image-item {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+</section> -->
+
+
+
+<!-- What we do section stop -->
+
+
+
+<!-- home page donate section slider start -->
+
+
+<section class="home_pg_donation_sec_slider1">
+  <h2>Our Causes</h2>
+  <p class="home_pg_donation_sec_slider_section-text">
+    <!-- The Prophet Muhammad (PBUH) said: <br>
+    "When a person dies, his deeds come to an end except for three: Sadaqah Jariyah, knowledge which is beneficial, or a virtuous descendant who prays for him." -->
+
+  We partner with organisations who share the same belief that education is a non-negotiable right for every child.
+  </p>
+
+  <div class="home_pg_donation_sec_slider1_wrapper">
+    <button class="home_pg_donation_sec_slider2_btn prev" aria-label="Previous">
+      <svg viewBox="0 0 24 24">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+    </button>
+
+    <div class="home_pg_donation_sec_slider1_container">
+      <div class="home_pg_donation_sec_slider2_track">
+
+
+
+         <!-- <a href="Support-For-Gaza.html" class="home_pg_donation_sec_slider2_card">
+          <img src="img/Support for Gaza Campaign.jpg" alt="Gaza Relief">
+          <h3>Support For Gaza</h3>
+      
+          <p>Lets join together for our Brothers in Gaza.</p>
+        </a> -->
+
+
+        <a href="VIGSA-Donation.html" class="home_pg_donation_sec_slider2_card">
+          <img src="img/gaza fundrising.jpg" alt="Gaza Relief">
+          <h3>VIGSA</h3>
+      
+          <p>Provide essential aid and support to families in need during times of crisis.</p>
+        </a>
+
+
+        <a href="Apex-Secondary-School-Donation.html" class="home_pg_donation_sec_slider2_card">
+          <img src="img/Apex Secondary School.jpg" alt="Orphan Care">
+          <h3>Apex Secondary School</h3>
+          <p>Provide shelter, food, and care for orphaned children who need our support.</p>
+        </a>
+
+
+        <a href="Causes.html" class="home_pg_donation_sec_slider2_card">
+          <img src="img/Madrasha Mauritania.jpg" alt="Madrasha Development">
+          <h3>Madrasahs 4 Mauritania</h3>
+          <p>Build and support Islamic educational institutions across communities.</p>
+        </a>
+
+        <a href="Lote-Tree-Primary-School-Donation.html" class="home_pg_donation_sec_slider2_card">
+          <img src="img/LoteTree-Primary School.jpg" alt="Community Development">
+          <h3>Lote Tree Primary School</h3>
+          <p>Support sustainable development projects in underserved communities worldwide.</p>
+        </a>
+
+
+
+        <a href="Al-Zikran-School-Donation.html" class="home_pg_donation_sec_slider2_card">
+          <img src="img/Al zikran school.jpg" alt="Education Programs">
+          <h3>AL-Zakirin School</h3>
+          <p>Help children access quality education and learning resources for a brighter future.</p>
+        </a>
+      
+        
+        <a href="Darul-Uloom-Jobeda-Khatun.html" class="home_pg_donation_sec_slider2_card">
+          <img src="img/DUJK.jpg" alt="Community Development">
+          <h3>Darul Uloom Jobeda Khatun</h3>
+          <p>Support sustainable development projects in underserved communities worldwide.</p>
+        </a>
+
+
+        <a href="Corvarha-Primary-School-Donation.html" class="home_pg_donation_sec_slider2_card">
+          <img src="img/Corvarha Primary School.jpg" alt="Community Development">
+          <h3>Corvarha Primary School</h3>
+          <p>Support sustainable development projects in underserved communities worldwide.</p>
+        </a>
+
+        <a href="Darul-Ihsan-Donation.html" class="home_pg_donation_sec_slider2_card">
+          <img src="img/Darul Ihsan.jpg" alt="Community Development">
+          <h3>Darul Ihsan</h3>
+          <p>Support sustainable development projects in underserved communities worldwide.</p>
+        </a>
+
+
+         <a href="Al-Rawda-Educational-Institution-Donation.html" class="home_pg_donation_sec_slider2_card">
+          <img src="img/AlRawda-Publications.jpg" alt="Community Development">
+          <h3>Al Rawda Educational Institution</h3>
+          <p>Support sustainable development projects in underserved communities worldwide.</p>
+        </a>
+
+
+        <a href="Darul-Irfan-Hifzal-Qur’an-Madrasah.html" class="home_pg_donation_sec_slider2_card">
+          <img src="img/DarulIrfanCause-400x300.jpg" alt="Community Development">
+          <h3>Darul Irfan Hifzal Qur’an Madrasah</h3>
+          <p>Support sustainable development projects in underserved communities worldwide.</p>
+        </a>
+        
+
+
+
+      </div>
+    </div>
+
+    <button class="home_pg_donation_sec_slider2_btn next" aria-label="Next">
+      <svg viewBox="0 0 24 24">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <div class="home_pg_donation_sec_slider1_more_btn_wrapper">
+    <a href="Donation.html">
+      <!-- <button class="home_pg_donation_sec_slider2_more_btn">Donate Now</button> -->
+    </a>
+  </div>
+</section>
+
+
+<script>
+
+
+const track = document.querySelector('.home_pg_donation_sec_slider2_track');
+const prevBtn = document.querySelector('.home_pg_donation_sec_slider2_btn.prev');
+const nextBtn = document.querySelector('.home_pg_donation_sec_slider2_btn.next');
+const cards = document.querySelectorAll('.home_pg_donation_sec_slider2_card');
+
+let currentIndex = 0;
+let visibleCards = 3;
+
+function updateVisibleCards() {
+  const width = window.innerWidth;
+  if (width < 600) visibleCards = 1;
+  else if (width < 992) visibleCards = 2;
+  else visibleCards = 3;
+  updateSlider();
+}
+
+function updateSlider() {
+  const cardWidth = cards[0].offsetWidth;
+  const gap = 24;
+  const moveAmount = (cardWidth + gap) * currentIndex;
+  track.style.transform = `translateX(-${moveAmount}px)`;
+  prevBtn.disabled = currentIndex === 0;
+  nextBtn.disabled = currentIndex >= cards.length - visibleCards;
+}
+
+nextBtn.addEventListener('click', () => {
+  if (currentIndex < cards.length - visibleCards) {
+    currentIndex++;
+    updateSlider();
+  }
+});
+
+prevBtn.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateSlider();
+  }
+});
+
+window.addEventListener('resize', updateVisibleCards);
+window.addEventListener('load', updateVisibleCards);
+
+
+
+</script>
+
+
+<!-- home page donate section slider stop -->
+
+
+ 
+<!-- Row Section Start -->
+
+<section class="row_section">
+  <div class="row_container">
+    <div class="row_header">
+      <h2>What We Do</h2>
+      <p>At Sixteen Foundation, we aim to deliver a future in which every community and its children have access to education.</p>
+    </div>
+
+    <div class="row_grid">
+      <!-- Box 1 -->
+      <div class="row_box">
+        <h3>We Build and Renovate Schools</h3>
+        <p>Brick by brick, we are constructing a safe environment for students to build a brighter future. Learn how our causes have benefited from a new or renovated school, transforming their community. </p>
+        <div class="row_icon">
+          <img src="img/We build  schools icon.png" alt="IT Support Icon">
+        </div>
+        <a href="We-Build-school.html" class="row_read_more">Read More →</a>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="row_box">
+        <h3>We Provide Student Resources</h3>
+        <p>Sometimes it is the simple things that are missing from a school that could make the biggest difference to a child’s learning. We support existing schools with resources that ensures no child is left<br> behind.</p>
+        <div class="row_icon">
+          <img src="img/We educate children icon.png" alt="Cloud Icon">
+        </div>
+        <a href="Studetnt-Resource.html" class="row_read_more">Read More →</a>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="row_box">
+        <h3>We Provide School Resources</h3>
+        <p>Any school should have the infrastructure in place to provide the best learning for its students. We partner with schools to ensure they have the resources in place to cater for the growing demands of education.</p>
+        <div class="row_icon">
+          <img src="img/We sponsor orphans icon.png" alt="Cybersecurity Icon">
+        </div>
+        <a href="School-Resource.html" class="row_read_more">Read More →</a>
+      </div>
+
+      <!-- Box 4 -->
+      <div class="row_box">
+        <h3>We Empower Communities</h3>
+        <p>Our causes and the shared belief that education is a <br> non-negotiable right, drives us <br> to transform communities<br> near and far in remote <br> villages, where a child can receive  the gift of <br> education.</p>
+        <div class="row_icon">
+          <img src="img/We empower Communities icon.png" alt="Consulting Icon">
+        </div>
+        <a href="Events.html" class="row_read_more">Read More →</a>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .row_section {
+      padding: 80px 20px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    .row_header {
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+
+    .row_header h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #172f62;
+      font-weight: 700;
+    }
+
+    .row_header p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .row_grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .row_box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px 25px;
+      /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); */
+      text-align: left;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      border: 2px solid black;
+    }
+
+    .row_box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .row_box h3 {
+      font-size: 22px;
+      color: #172f62;
+      margin-bottom: 10px;
+    }
+
+    .row_box p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .row_icon {
+      margin: 10px 0 20px;
+    }
+
+    .row_icon img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .row_read_more {
+      font-size: 16px;
+      color: #172f62;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: auto;
+    }
+
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .row_grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .row_grid {
+        grid-template-columns: 1fr;
+      }
+
+      .row_box {
+        text-align: center;
+        align-items: center;
+      }
+
+      .row_box h3,
+      .row_box p,
+      .row_read_more {
+        text-align: center;
+      }
+    }
+  </style>
+</section>
+
+
+
+<!-- Row Section Stop -->
+
+
+
+
+
+
+
+<!-- home donation Video Section Start -->
+
+
+<section class="home_pg_main_vdo">
+  <div class="container">
+    <h2 class="home_pg_main_vdo__heading">See How Your Donations Make A Difference</h2>
+    <p class="home_pg_main_vdo__text">
+      From our selfless volunteers pre-event to our determined volunteers post-event, delivering the promise to our donors, look at how you have empowered lives through education.
+    </p>
+
+    <div class="home_pg_main_vdo__video-wrapper">
+      <!-- Thumbnail -->
+      <img 
+        src="img/thumbnil.jpg" 
+        alt="Video Thumbnail" 
+        class="home_pg_main_vdo__thumbnail"
+      >
+      <!-- Play Button -->
+      <button class="home_pg_main_vdo__play-btn">&#9654;</button>
+
+      <!-- YouTube iframe (hidden initially) -->
+      <iframe 
+        class="home_pg_main_vdo__video" 
+        width="100%" 
+        height="450" 
+        src="" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        style="display: none;">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<script>
+const wrapper = document.querySelector('.home_pg_main_vdo__video-wrapper');
+const playBtn = wrapper.querySelector('.home_pg_main_vdo__play-btn');
+const thumbnail = wrapper.querySelector('.home_pg_main_vdo__thumbnail');
+const iframe = wrapper.querySelector('.home_pg_main_vdo__video');
+
+// Your YouTube embed link
+const youtubeLink = "https://www.youtube.com/embed/hxXcKXF8NG4?si=VjfjtVxR7sfT_wbh";
+
+playBtn.addEventListener('click', () => {
+  thumbnail.style.display = 'none';
+  playBtn.style.display = 'none';
+  iframe.style.display = 'block';
+  iframe.src = youtubeLink + "?autoplay=1";
+});
+</script>
+
+
+<!-- home donation Video Section End -->
+
+
+
+
+<!-- home page timeline section start -->
+
+
+ <section class="history-section">
+  <div class="content-wrapper">
+    <h2>Our Story</h2>
+    
+    <p class="section-text" id="history-text">
+     Check out the key milestones of our journey over the years.
+    </p>
+
+    <div class="timeline-container">
+      <div class="timeline-nav prev" id="timeline-prev"></div>
+      <div class="timeline" id="timeline">
+        <div class="timeline-item active" data-index="0"><div class="year">2020</div></div>
+        <div class="timeline-item" data-index="1"><div class="year">2021</div></div>
+        <div class="timeline-item" data-index="2"><div class="year">2022</div></div>
+        <div class="timeline-item" data-index="3"><div class="year">2023</div></div>
+        <div class="timeline-item" data-index="4"><div class="year">2024</div></div>
+        <div class="timeline-item" data-index="5"><div class="year">2025</div></div>
+      </div>
+      <div class="timeline-nav next" id="timeline-next"></div>
+    </div>
+  </div>
+</section>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const historyTexts = [
+      "Our story began when we founded Sixteen Foundation: A community organisation in memory of our beloved parents.",
+      "We planted a Tree in memory of our parents, each season it reflects the course nature, from bare branches in the autumn, to blooming flowers in the spring.",
+      "2 events raising for Darul Ihsan’s IT equipment and build of Corvaha Primary School in Bangladesh.",
+      "2 fundraising events raising for orphans in Bangladesh and new school builds in Sudan.",
+      "We built a Mosque in Bangladesh in memory or our parents. 2 events raising for Science Lab at Apex Secondary and renovation of Playground in Lote Tree Primary.",
+      "Scholarship granted to our 7th Student, studying at Darul Uloom, Bolton"
+    ];
+
+    const textEl = document.getElementById('history-text');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const prevBtn = document.getElementById('timeline-prev');
+    const nextBtn = document.getElementById('timeline-next');
+
+    // Function to update the active timeline item
+    function updateTimelineItem(index) {
+      timelineItems.forEach(i => i.classList.remove('active'));
+      timelineItems[index].classList.add('active');
+      
+      textEl.style.opacity = 0;
+      setTimeout(() => {
+        textEl.textContent = historyTexts[index];
+        textEl.style.opacity = 1;
+      }, 300);
+    }
+
+    // Add click event to timeline items
+    timelineItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const index = parseInt(item.dataset.index);
+        updateTimelineItem(index);
+      });
+    });
+
+    // Add click event to previous button
+    prevBtn.addEventListener('click', () => {
+      const activeIndex = parseInt(document.querySelector('.timeline-item.active').dataset.index);
+      const prevIndex = (activeIndex - 1 + timelineItems.length) % timelineItems.length;
+      updateTimelineItem(prevIndex);
+    });
+
+    // Add click event to next button
+    nextBtn.addEventListener('click', () => {
+      const activeIndex = parseInt(document.querySelector('.timeline-item.active').dataset.index);
+      const nextIndex = (activeIndex + 1) % timelineItems.length;
+      updateTimelineItem(nextIndex);
+    });
+
+    // Auto-advance timeline every 5 seconds
+    let autoAdvance = setInterval(() => {
+      const activeIndex = parseInt(document.querySelector('.timeline-item.active').dataset.index);
+      const nextIndex = (activeIndex + 1) % timelineItems.length;
+      updateTimelineItem(nextIndex);
+    }, 5000);
+
+    // Pause auto-advance on user interaction
+    [prevBtn, nextBtn, ...timelineItems].forEach(element => {
+      element.addEventListener('click', () => {
+        clearInterval(autoAdvance);
+        // Restart auto-advance after 10 seconds of inactivity
+        autoAdvance = setInterval(() => {
+          const activeIndex = parseInt(document.querySelector('.timeline-item.active').dataset.index);
+          const nextIndex = (activeIndex + 1) % timelineItems.length;
+          updateTimelineItem(nextIndex);
+        }, 5000);
+      });
+    });
+  });
+    </script>
+
+
+
+<!-- Home page timeline section stop -->
+
+
+
+<!-- home page donate section ways start -->
+
+<section class="home_pg_donate_more_way_section">
+  <div class="home_pg_donate_more_way_container">
+    <div class="home_pg_donate_more_way_inner">
+      
+      <div class="home_pg_donate_more_way_title">
+        <h2>More Ways to Donate</h2>
+      </div>
+
+      <div class="home_pg_donate_more_way_grid">
+        <!-- Donation Item 1 -->
+        <div class="home_pg_donate_more_way_card">
+          <div class="home_pg_donate_more_way_icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h3>Over the Phone</h3>
+          <p>To donate over the phone, Call: 07507446472 and ask for the fundraising team.</p>
+        </div>
+
+        <!-- Donation Item 2 -->
+        <div class="home_pg_donate_more_way_card">
+          <div class="home_pg_donate_more_way_icon">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3>Via Website</h3>
+          <p> Visit this link to <br><a href="Contact.html">Donate Now</a>. </p>
+        </div>
+
+        <!-- Donation Item 3 -->
+        <div class="home_pg_donate_more_way_card">
+          <div class="home_pg_donate_more_way_icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <h3>By Bank Transfer</h3>
+          <p>Account Name: Sixteen Foundation
+            Account Number: 65520163
+            Sort Code: 30-98-97</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<!-- home page donate section ways stop -->
+
+
+
+
+
+<!-- Home Page podcast section start -->
+
+<div class="home_pd_pod-section_bg">
+
+  <section class="home_pd_pod-section">
+
+    <div class="home_pd_pod-hero">
+      <div class="home_pd_pod-text">
+        <h2>Our Podcast Sessions</h2>
+        <p>Join us in this inspiring session where we talk about the power of giving back as students. From real-life stories to impactful interviews, we explore how student-led donations are making a difference in communities.</p>
+      </div>
+
+      <!-- Hero Video with Thumbnail & Play Button -->
+      <div class="home_pd_pod-video-wrapper" style="position: relative; padding-top: 56.25%; overflow: hidden;">
+        <img src="img/Podcast Thumbnil.bmp" alt="Video Thumbnail" class="home_pd_pod-video-thumbnail" 
+             style="position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover;">
+        <button class="home_pd_pod-video-play-btn">&#9654;</button>
+        <!-- YouTube iframe will be injected dynamically -->
+      </div>
+    </div>
+
+    <!-- Upcoming Episodes -->
+    <div class="home_pg_pod_sec_upcoming_episode1_wrapper">
+
+      <section class="home_pg_pod_sec_upcoming_episode1">
+        <h2>Upcoming Episodes</h2>
+
+        <div class="home_pg_pod_sec_upcoming_episode1_wrapper_inner">
+          <button class="home_pg_pod_sec_upcoming_episode1_btn1 prev" aria-label="Previous">
+            <svg viewBox="0 0 24 24">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+
+          <div class="home_pg_pod_sec_upcoming_episode1_container">
+            <div class="home_pg_pod_sec_upcoming_episode1_track">
+
+              <a href="Podcast.html" class="home_pg_pod_sec_upcoming_episode1_card">
+                <img src="img/Podcast 1.jpg" alt="Blog 1">
+                <h3>Summer Event</h3>
+                <p>With the help of our late parent's inheritance, we have been able to set up a small scale scholarship scheme. This schem...</p>
+              </a>
+              <a href="Podcast.html" class="home_pg_pod_sec_upcoming_episode1_card">
+                <img src="img/Podcast 2.jpg" alt="Blog 2">
+                <h3>Ramadan Event</h3>
+                <p>Many Muslims in the UK dream of a better life in the Middle East, better weather, a chance to experience another culture...</p>
+              </a>
+              <a href="Podcast.html" class="home_pg_pod_sec_upcoming_episode1_card">
+                <img src="img/Podcast 3.jpg" alt="Blog 3">
+                <h3>Experience of <br> Schooling</h3>
+                <p>Sixteen Foundation work with friends and family to run events and ensure that the fundraisers run smoothly. These volunt...</p>
+              </a>
+              <a href="Podcast.html" class="home_pg_pod_sec_upcoming_episode1_card">
+                <img src="img/Podcast 4.jpg" alt="Blog 1">
+                <h3>Share your<br>Plans</h3>
+                <p>In Ramadhan 2022 we had the privilege in supporting Darul Ihsan and their continuation to support young orphans...</p>
+              </a>
+
+            </div>
+          </div>
+
+          <button class="home_pg_pod_sec_upcoming_episode1_btn2 next" aria-label="Next">
+            <svg viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <div class="home_pg_pod_sec_upcoming_episode1_more_btn_wrapper">
+          <a href="Podcast.html">
+            <button class="home_pg_pod_sec_upcoming_episode1_more_btn">Watch Our Podcast</button>
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- Slider Script -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.home_pg_pod_sec_upcoming_episode1_track');
+  const prevBtn = document.querySelector('.home_pg_pod_sec_upcoming_episode1_btn1.prev');
+  const nextBtn = document.querySelector('.home_pg_pod_sec_upcoming_episode1_btn2.next');
+  const cards = document.querySelectorAll('.home_pg_pod_sec_upcoming_episode1_card');
+
+  let currentIndex = 0;
+  let visibleCards = 3;
+
+  function updateVisibleCards() {
+    const width = window.innerWidth;
+    if (width < 600) visibleCards = 1;
+    else if (width < 992) visibleCards = 2;
+    else visibleCards = 3;
+    updateSlider();
+  }
+
+  function updateSlider() {
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 24;
+    const moveAmount = (cardWidth + gap) * currentIndex;
+    track.style.transform = `translateX(-${moveAmount}px)`;
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= cards.length - visibleCards;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < cards.length - visibleCards) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+
+  window.addEventListener('resize', updateVisibleCards);
+  updateVisibleCards(); // initial call
+});
+</script>
+
+<!-- YouTube Play Button Script supporting full and short links -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const heroWrapper = document.querySelector('.home_pd_pod-video-wrapper');
+  const playBtn = heroWrapper.querySelector('.home_pd_pod-video-play-btn');
+  const thumbnail = heroWrapper.querySelector('.home_pd_pod-video-thumbnail');
+
+  // Your YouTube link (short or full)
+  const youtubeLink = 'https://youtu.be/tMBdA2gkXgk?si=lDpEdporLF8A7dbG';
+
+  // Function to extract video ID from full or short YouTube link
+  function getYouTubeId(url) {
+    let videoId = null;
+    // Full link: youtube.com/watch?v=ID
+    const fullMatch = url.match(/[?&]v=([^&]+)/);
+    if (fullMatch) videoId = fullMatch[1];
+    // Short link: youtu.be/ID (ignore any query params)
+    const shortMatch = url.match(/youtu\.be\/([^?]+)/);
+    if (shortMatch) videoId = shortMatch[1];
+    return videoId;
+  }
+
+  playBtn.addEventListener('click', () => {
+    if (thumbnail) thumbnail.style.display = 'none';
+    playBtn.style.display = 'none';
+
+    const videoId = getYouTubeId(youtubeLink);
+    if (!videoId) return console.error('Invalid YouTube URL');
+
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`);
+    iframe.setAttribute('title', 'YouTube video player');
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; autoplay');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.style.position = 'absolute';
+    iframe.style.top = '0';
+    iframe.style.left = '0';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+
+    heroWrapper.appendChild(iframe);
+  });
+});
+</script>
+
+
+<!-- Home page podcast section stop -->
+
+
+<!-- Become a volunteer section start -->
+
+
+<!-- <section class="volunteer_gathering_or_inspire_section">
+  <div class="volunteer_gathering_or_inspire_container">
+    <div class="volunteer_gathering_or_inspire_wrap">
+      
+      <div class="volunteer_gathering_or_inspire_text">
+        <span class="volunteer_gathering_or_inspire_subheading">Join Our Mission</span>
+        <h2 class="volunteer_gathering_or_inspire_heading">Volunteer & Make a Difference</h2>
+        <p class="volunteer_gathering_or_inspire_paragraph">Become a part of our passionate community of volunteers. Your time, energy, and skills can create meaningful change and inspire others.</p>
+        <a href="Volunteer.html" class="volunteer_gathering_or_inspire_button">Join Now</a>
+      </div>
+
+ 
+      <div class="volunteer_gathering_or_inspire_images">
+        <div class="volunteer_gathering_or_inspire_img_grid">
+          <img src="img/sixteen foundation volunteers.jpg" alt="Volunteer 1" class="volunteer_gathering_or_inspire_img">
+          <img src="img/10k Fun Run 2.jpg" alt="Volunteer 2" class="volunteer_gathering_or_inspire_img">
+          <img src="img/Goals for Gaza image2.jpg" alt="Volunteer 3" class="volunteer_gathering_or_inspire_img">
+          <img src="img/Totes 4 Textbooks 2025.jpg" alt="Volunteer 4" class="volunteer_gathering_or_inspire_img">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+
+.volunteer_gathering_or_inspire_section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  color: #0B3857;
+  font-family: Arial, sans-serif;
+}
+
+
+.volunteer_gathering_or_inspire_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.volunteer_gathering_or_inspire_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+
+.volunteer_gathering_or_inspire_text {
+  flex: 1 1 500px;
+}
+
+.volunteer_gathering_or_inspire_subheading {
+  display: block;
+  font-size: clamp(14px, 1.2vw, 16px);
+  color: #0B3857;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.volunteer_gathering_or_inspire_heading {
+  font-size: clamp(28px, 3vw, 36px);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.volunteer_gathering_or_inspire_paragraph {
+  font-size: clamp(16px, 2vw, 18px);
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.volunteer_gathering_or_inspire_button {
+  display: inline-block;
+  padding: 14px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #0B3857;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: 2px solid #ffffff;
+}
+
+
+
+.volunteer_gathering_or_inspire_images {
+  flex: 1 1 500px;
+}
+
+.volunteer_gathering_or_inspire_img_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.volunteer_gathering_or_inspire_img {
+  width: 100%;
+  height: auto;
+  
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.volunteer_gathering_or_inspire_img:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 991px) {
+  .volunteer_gathering_or_inspire_wrap {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .volunteer_gathering_or_inspire_text, .volunteer_gathering_or_inspire_images {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .volunteer_gathering_or_inspire_img_grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .volunteer_gathering_or_inspire_heading {
+    font-size: clamp(24px, 5vw, 28px);
+  }
+  .volunteer_gathering_or_inspire_paragraph {
+    font-size: clamp(14px, 3vw, 16px);
+  }
+}
+</style> -->
+
+
+
+<!-- become a volunteer section stop -->
+
+
+
+
+
+
+
+
+<!-- Treat and iftar feature section start -->
+
+<!-- 
+<section class="treat_iftar_announcement">
+  <div class="treat_iftar_image">
+    <img src="img/Treat an iftar Hero Image.png" alt="Treat an Iftar 2026">
+  </div>
+
+  <div class="treat_iftar_content">
+    <h2>Treat an Iftar 2026</h2>
+    <p>Join us in spreading joy this Ramadan by participating in our "Treat an Iftar" initiative. Your contribution helps provide iftar meals to those in need.</p>
+    <a href="Order-Iftar.html" class="treat_iftar_button">Place Your Order</a>
+  </div>
+</section>
+
+<style>
+    .treat_iftar_announcement {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 40px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      background-color: #f8f8f8;
+      
+      flex-wrap: wrap;
+    }
+
+    .treat_iftar_image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .treat_iftar_image img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #0B3857;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .treat_iftar_image img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .treat_iftar_content {
+      flex: 2;
+      color: #0B3857;
+    }
+
+    .treat_iftar_content h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .treat_iftar_content p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .treat_iftar_button {
+      display: inline-block;
+      background-color: #0B3857;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px 25px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    
+    @media (max-width: 992px) {
+      .treat_iftar_announcement {
+        flex-direction: column;
+        text-align: center;
+      }
+      .treat_iftar_content h2 {
+        font-size: 28px;
+      }
+      .treat_iftar_content p {
+        font-size: 16px;
+      }
+      .treat_iftar_image img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style> -->
+
+
+<!-- Treat and iftar feature session stop  -->
+
+
+<!-- Home Page Blog Section Start  -->
+
+
+<div class="home_pg_blog_section_bg">
+
+<section class="home_pg_blog_sec_slider1">
+  <h2>Our Latest Blogs</h2>
+  <p class="home_pg_blog_sec_slider_section-text">
+    Stay updated with our latest news, stories, and insights on student-led initiatives and community impact.
+  </p>
+
+  <div class="home_pg_blog_sec_slider1_wrapper">
+    <button class="home_pg_blog_sec_slider2_btn prev" aria-label="Previous">
+      <svg viewBox="0 0 24 24">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+    </button>
+
+    <div class="home_pg_blog_sec_slider1_container">
+      <div class="home_pg_blog_sec_slider2_track">
+
+        <a href="Sixteen-Foundation-Scholarships-Blog.html" class="home_pg_blog_sec_slider2_card">
+          <img src="img/sixteen foundation scholarship blog.jpg" alt="Blog 1">
+          <h3>Sixteen Foundation Scholarships</h3>
+          <p>With the help of our late parent's inheritance, we have been able to set up a small scale scholarship scheme. This schem...</p>
+        </a>
+
+        <a href="Teaching-&-Life-In-Middel-East-Blog.html" class="home_pg_blog_sec_slider2_card">
+          <img src="img/Teaching in Middle east blog.jpg" alt="Blog 2">
+          <h3>Teaching and Life in the Middle East</h3>
+          <p>Many Muslims in the UK dream of a better life in the Middle East, better weather, a chance to experience another culture...</p>
+        </a>
+
+
+        <a href="Sixteen-Foundation-Volunteers-Blog.html" class="home_pg_blog_sec_slider2_card">
+          <img src="img/sixteen foundation volunteers.jpg" alt="Blog 3">
+          <h3>Sixteen Foundation Volunteers</h3>
+          <p>Sixteen Foundation work with friends and family to run events and ensure that the fundraisers run smoothly. These volunt...</p>
+        </a>
+
+
+        <a href="Sixteen-Foundation-Causes-Blog.html" class="home_pg_blog_sec_slider2_card">
+          <img src="img/Sixteen Foundation Causes Blog.jpg" alt="Blog 1">
+          <h3>Sixteen Foundation Causes</h3>
+          <p>In Ramadhan 2022 we had the privilege in supporting Darul Ihsan and their continuation to support young orphans and thei...</p>
+        </a>
+        <a href="Teaching-&-Motivation-Blog.html" class="home_pg_blog_sec_slider2_card">
+          <img src="img/Teaching and Motivation Blog.jpg" alt="Blog 2">
+          <h3>Teaching and Motivation</h3>
+          <p>There are a couple of questions which I hear fairly regularly within my classroom during Maths relating to motivation fo...</p>
+        </a>
+        <a href="Tech-&-Educational-Benefits-Blog.html" class="home_pg_blog_sec_slider2_card">
+          <img src="img/Teaching and Educational Benefits Blog.jpg" alt="Blog 3">
+          <h3>Tech and Educational Benefits</h3>
+          <p>Technology has undoubtedly changed the way we learn and teach. It offers resources and access for teachers who can deliv...</p>
+        </a>
+
+
+        <a href="Empower-Through-Education-Blog.html" class="home_pg_blog_sec_slider2_card">
+          <img src="img/Empower Through Education.jpg" alt="Blog 3">
+          <h3>Empower through Education</h3>
+          <p>In some cases, it is arguable that education broadens a child's horizon and benefits the community and subsequently, the...</p>
+        </a>
+
+
+        <a href="Education-Matters-Blog.html" class="home_pg_blog_sec_slider2_card">
+          <img src="img/Education Matters Blog.jpg" alt="Blog 3">
+          <h3>Education Matters</h3>
+          <p>Education plays a significant role in every person’s life. It helps build character, opinions and intellect. Each indivi...</p>
+        </a>
+
+        <a href="Sixteen-Foundation-Events-Blog.html" class="home_pg_blog_sec_slider2_card">
+          <img src="img/sixteen foundation blog 3.jpg" alt="Blog 3">
+          <h3>Sixteen Foundation Events</h3>
+          <p>We decided as a collective to set up two events a year. The first event would coincide with Ramadhan and would comprise ...</p>
+        </a>
+
+        <a href="Schools-Out-Forever-Blog.html" class="home_pg_blog_sec_slider2_card">
+          <img src="img/Schools Out Forever Blog.jpg" alt="Blog 3">
+          <h3>School’s Out Forever</h3>
+          <p>I start walking to school, savouring the crisp Autumn air, scanning the stunning scenery filled with vibrant oranges and...</p>
+        </a>
+
+
+
+      </div>
+    </div>
+
+    <button class="home_pg_blog_sec_slider2_btn next" aria-label="Next">
+      <svg viewBox="0 0 24 24">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <div class="home_pg_blog_sec_slider1_more_btn_wrapper">
+    <a href="Blog.html">
+      <button class="home_pg_blog_sec_slider2_more_btn">More Blogs</button>
+    </a>
+  </div>
+</section>
+
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.home_pg_blog_sec_slider2_track');
+  const prevBtn = document.querySelector('.home_pg_blog_sec_slider2_btn.prev');
+  const nextBtn = document.querySelector('.home_pg_blog_sec_slider2_btn.next');
+  const cards = document.querySelectorAll('.home_pg_blog_sec_slider2_card');
+
+  let currentIndex = 0;
+  let visibleCards = 3;
+
+  function updateVisibleCards() {
+    const width = window.innerWidth;
+    if (width < 600) visibleCards = 1;
+    else if (width < 992) visibleCards = 2;
+    else visibleCards = 3;
+    updateSlider();
+  }
+
+  function updateSlider() {
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 24;
+    const moveAmount = (cardWidth + gap) * currentIndex;
+    track.style.transform = `translateX(-${moveAmount}px)`;
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= cards.length - visibleCards;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < cards.length - visibleCards) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+
+  window.addEventListener('resize', updateVisibleCards);
+  updateVisibleCards(); // initial call
+});
+
+</script>
+
+
+<!-- Home Page Blog Section Stop -->
+
+
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+
+</body>
+</html>
+
+
+
+

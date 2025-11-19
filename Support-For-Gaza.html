@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+  
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+
+
+<style>
+
+/* hero section start */
+
+
+
+.individual_events_page_hero_section {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.individual_events_page_hero_bg {
+  margin: 0 auto;
+  padding: 200px 20px;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/Support\ for\ Gaza\ Campaign.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.individual_events_page_hero_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.individual_events_page_hero_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .individual_events_page_hero_content h1 { font-size: 36px; }
+  .individual_events_page_hero_content p { font-size: 18px; }
+}
+
+@media (max-width: 600px) {
+  .individual_events_page_hero_content h1 { font-size: 28px; }
+  .individual_events_page_hero_content p { font-size: 16px; }
+  .individual_events_page_hero_bg { padding: 90px 15px; }
+}
+
+
+/* hero section stop */
+
+
+
+
+/* individual donation section start */
+
+
+
+.individual_donation_section {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.individual_donation_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.individual_donation_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.individual_donation_text {
+  flex: 1 1 500px;
+ 
+}
+
+.individual_donation_text h2 {
+  font-size: 36px;
+  color: #0B3857;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.individual_donation_text p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.individual_donation_image {
+  flex: 1 1 500px;
+}
+
+.individual_donation_image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+.individual_donation_bottom p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+.individual_donation_button {
+  text-align: center;
+}
+
+.donation_proceed_btn {
+  display: inline-block;
+  background-color: #0B3857;
+  color: #fff;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(11, 56, 87, 0.2);
+}
+
+.donation_proceed_btn:hover {
+  background-color: #144a8c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(11, 56, 87, 0.3);
+}
+
+@media (max-width: 992px) {
+  .individual_donation_top {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .individual_donation_text,
+  .individual_donation_image {
+    flex: 0 0 auto; /* <-- allow height to be auto according to content */
+    text-align: center;
+  }
+
+  .individual_donation_text h2 {
+    font-size: 28px;
+  }
+
+  .individual_donation_text p,
+  .individual_donation_bottom p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .individual_donation_text h2 {
+    font-size: 24px;
+  }
+
+  .individual_donation_text p,
+  .individual_donation_bottom p {
+    font-size: 15px;
+  }
+}
+
+/* individual donation section stop */
+
+
+
+</style>
+
+<!-- Blog Section Stop -->
+
+
+<!-- Events Page Hero Section Start -->
+
+
+  <section class="individual_events_page_hero_section">
+    <div class="individual_events_page_hero_bg">
+      <div class="individual_events_page_hero_content">
+        <h1>Support For Gaza</h1>
+        <p>Explore our latest stories, insights, and updates on student-led initiatives and community impact. Stay inspired and informed with our blog posts.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Events Page Hero Section Stop-->
+
+
+<!-- individual donation page section start -->
+
+
+<section class="individual_donation_section">
+  <div class="individual_donation_container">
+    
+    <div class="individual_donation_top">
+      <div class="individual_donation_text">
+        <h2>Support a Child in Need</h2>
+        <p>
+          Your contribution can bring education, food, and hope to children in Gaza. Every donation makes a difference and empowers young lives. We are collecting donations to provide essential aid and support to those affected by the ongoing crisis. Your generosity can help us deliver food, medical supplies, and educational resources to children and families in desperate need. Together, we can make a significant impact and bring hope to those who need it most.
+        </p>
+      </div>
+      <div class="individual_donation_image">
+        <img src="img/Gaza fund raise.jpeg" alt="Child Donation Image">
+      </div>
+    </div>
+
+  
+    <div class="individual_donation_bottom">
+      <p>
+        Join our mission to provide essential resources and opportunities to children who need it the most. Together, we can change lives and build a brighter future.
+      </p>
+    </div>
+
+
+    <div class="individual_donation_button">
+      <a href="#" class="donation_proceed_btn">Proceed for Donation</a>
+    </div>
+  </div>
+</section>
+  
+
+
+<!-- individual donation page section stop -->
+
+
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> School Resource | Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+<!-- Blog Page Hero Section Start -->
+
+<section class="newsletter_page_hero">
+  <div class="newsletter_page_hero_bg">
+    <div class="newsletter_page_hero_content">
+      <h1>We Fund School Resources </h1>
+      <p>Every contribution helps to restore and improve schools, support educational programmes, develop the social well being of a child within a happy and secure environment.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+
+
+/*  Hero Section start */
+
+.newsletter_page_hero {
+  width: 100%;
+  background-color: #ffffff; 
+}
+
+.newsletter_page_hero_bg {
+  margin: 0 auto;
+  padding: 200px 20px; /* top and bottom spacing */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/School\ Resource\ header\ image.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.newsletter_page_hero_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.newsletter_page_hero_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 36px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 28px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 16px;
+  }
+  .newsletter_page_hero_bg {
+    padding: 90px 15px;
+  }
+}
+
+
+</style>
+
+
+ <!-- Newsletter Page Hero Section stop  -->
+
+
+
+<!-- We renovate school inner section start -->
+
+
+<!-- ===================== SCHOOL RESOURCE SECTION ===================== -->
+<section class="school-resource-wrapper">
+
+  <!-- Banner Section -->
+  <div class="container intro-section">
+    <div class="left-content">
+      <h3 class="section-heading">We Fund School Resources</h3>
+      <p class="intro-text">
+        We provide essential resources and tools for schools to enhance their learning environment for their students. <br>
+
+        The schools we have supported lack access to simple renovations that require improvement. This simple change makes such a big difference to the learning and general presentation of the school.
+
+        <br> 
+
+        With the right changes, schools can undoubtedly create better learning environments, thus allowing their students to thrive without compromise. Your contribution makes a tangible difference in educational success.
+
+      </p>
+    </div>
+
+    <div class="right-image">
+      <img src="img/School resources image.png" alt="School Resources">
+    </div>
+  </div>
+
+  <!-- Main Text Section -->
+  <div class="container schools-list">
+   
+
+    <!-- School Tabs -->
+    <div class="school-item">
+      <div class="school-text">
+        <h4><a href="Darul-Irfan-Hifzal-Qur’an-Madrasah.html">Darul Irfan</a></h4>
+        <p>In Ramadhan 2021, we supported Darul Irfan Hifzul Quran Madrasah in the Kutapulong refugee camp, Bangladesh, providing shelter, food, and education for displaced Rohingyan children. With your donations, the school repaired its roof, purchased desks, bookshelves, uniforms, and installed a clean water supply, ensuring the children can learn in a safe and nurturing environment.</p>
+      </div>
+      <div class="school-photo">
+        <img src="img/DarulIrfanCause-400x300.jpg" alt="Darul Irfan School">
+      </div>
+    </div>
+
+    <div class="school-item">
+      <div class="school-text">
+        <h4><a href="Lote-Tree-Primary-School-Donation.html">Lote Tree Primary</a></h4>
+        <p>With 92 students enrolled, Sixteen Foundation supported the development of the school playground under Headteacher Mariam Ashique’s guidance. Renovations included laying AstroTurf for safe play in all weather, rebuilding the partition wall for privacy and safety, and adding storage for new play equipment, enhancing both the physical and mental well-being of the children.</p>
+      </div>
+      <div class="school-photo">
+        <img src="img/Lote Primary School Gallery image 1 (1).jpg" alt="Lote Tree Primary">
+      </div>
+    </div>
+  </div>
+
+  <!-- Impact Numbers -->
+  <div class="container impact-section">
+    <h3 class="impact-title">Our Impact on Schools</h3>
+
+    <div class="impact-grid">
+      <div class="impact-box">
+        <span class="counter" data-target="200">0</span>+
+        <p>Students Equipped</p>
+      </div>
+
+      <div class="impact-box">
+        <span class="counter" data-target="2">0</span>
+        <p>Schools Supported</p>
+      </div>
+
+      <div class="impact-box">
+        <span class="counter" data-target="2">0</span>
+        <p>Countries Reached</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===================== CSS ===================== -->
+<style>
+.school-resource-wrapper {
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.section-heading {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #0B3857;
+}
+
+/* Layout */
+.intro-section {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.left-content {
+  flex: 1;
+}
+
+.intro-text {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.right-image {
+  flex: 1;
+}
+
+.right-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+/* School Items / Tabs */
+.schools-list {
+  margin-top: 40px;
+}
+
+.school-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+  border-left: 5px solid #F4CB35;
+  padding-left: 15px;
+}
+
+.school-text h4 {
+  color: #0B3857;
+  font-size: 25px;
+}
+
+.school-text h4 a {
+  text-decoration: none;
+  color: #0B3857;
+}
+
+.school-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #F4CB35;
+}
+
+/* Impact Section */
+.impact-section {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.impact-title {
+  color: #0B3857;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.impact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.impact-box {
+  font-size: 22px;
+  text-align: center;
+}
+
+.impact-box .counter {
+  font-size: 48px;
+  font-weight: bold;
+  color: #F4CB35;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .school-photo img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-image img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .school-item {
+    flex-direction: column;
+    text-align: center;
+    border-left: none;
+    border-top: 5px solid #F4CB35;
+    padding-top: 15px;
+  }
+
+  .school-photo img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-heading {
+    font-size: 28px;
+  }
+
+  .intro-text {
+    font-size: 16px;
+  }
+}
+</style>
+
+<!-- ===================== JS ===================== -->
+<script>
+const counters = document.querySelectorAll('.counter');
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5 
+};
+
+const animateCounter = (counter) => {
+  const target = +counter.getAttribute('data-target');
+  let count = 0;
+  const speed = 200;
+  const increment = target / speed;
+
+  const updateCount = () => {
+    if (count < target) {
+      count += increment;
+      counter.innerText = Math.ceil(count);
+      requestAnimationFrame(updateCount);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  updateCount();
+};
+
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      counters.forEach(counter => animateCounter(counter));
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const impactSection = document.querySelector('.impact-section');
+const observer = new IntersectionObserver(observerCallback, options);
+observer.observe(impactSection);
+</script>
+
+
+<!-- We build school inner section stop -->
+
+
+
+
+ 
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+</body>
+</html>

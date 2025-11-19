@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Preorder an Iftar | Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+<!-- Blog Page Hero Section Start -->
+
+<section class="newsletter_page_hero">
+  <div class="newsletter_page_hero_bg">
+    <div class="newsletter_page_hero_content">
+      <h1>Treat an Iftar </h1>
+      <p>Every order brings delicious Iftar meals to your table while supporting our community initiatives, with transparent updates showing the impact of your support.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+
+
+/*  Hero Section start */
+
+.newsletter_page_hero {
+  width: 100%;
+  background-color: #ffffff; 
+}
+
+.newsletter_page_hero_bg {
+  margin: 0 auto;
+  padding: 200px 20px; /* top and bottom spacing */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Order\ an\ Iftar\ Hero\ Image..png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.newsletter_page_hero_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.newsletter_page_hero_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 36px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 28px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 16px;
+  }
+  .newsletter_page_hero_bg {
+    padding: 90px 15px;
+  }
+}
+
+
+</style>
+
+
+ <!-- Newsletter Page Hero Section stop  -->
+
+
+
+<!-- treat section inner section start -->
+
+
+
+<section class="food_order_section">
+  <style>
+    .food_order_section {
+      padding: 40px 0;
+    }
+    .food_order_container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .food_order_title {
+      text-align: center;
+      color: #0b3857;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    /* .food_order_title::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: #0b3857;
+    } */
+
+    /* Menu Grid */
+    .menu_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .menu_card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+      background: #fff;
+    }
+    .menu_card:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Square image */
+    .menu_img {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+    }
+    .menu_img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .menu_content {
+      padding: 15px;
+    }
+    .menu_content h3 {
+      color: #0b3857;
+      margin: 0 0 8px 0;
+      font-size: 18px;
+    }
+    .menu_content p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .menu_price {
+      font-weight: 700;
+      color: #0b3857;
+      margin-bottom: 12px;
+    }
+
+    /* Primary Button (matches .volunteer_button style) */
+    .add_btn,
+    .submit_btn {
+      display: inline-block;
+      background-color: #0B3857;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px 25px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+      width: 100%;
+      text-align: center;
+    }
+    .add_btn:hover,
+    .submit_btn:hover {
+      background-color: #144a8c;
+      transform: translateY(-2px);
+    }
+
+    .order_summary {
+      background: #f8f8f8;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .order_item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    /* Quantity Buttons Styled to Match Site */
+    .quantity_ctrl {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .quantity_btn {
+      background: #0B3857;
+      color: #fff;
+      border: none;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .quantity_btn:hover {
+      background-color: #144a8c;
+      transform: translateY(-1px);
+    }
+    .quantity_num {
+      width: 40px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      height: 32px;
+      line-height: 30px;
+      font-size: 15px;
+    }
+
+    /* Form styling */
+    .order_form {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+    }
+    .form_group {
+      margin-bottom: 15px;
+    }
+    label {
+      font-weight: 600;
+      color: #0b3857;
+      display: block;
+      margin-bottom: 5px;
+    }
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #0b3857;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(11, 56, 87, 0.1);
+    }
+  </style>
+
+  <div class="food_order_container">
+    <h2 class="food_order_title">Order Your Favourite Food</h2>
+
+    <div class="menu_grid">
+      <div class="menu_card">
+        <div class="menu_img">
+          <img src="img/Treat So sweet Gallery image 2.png" alt="Margherita Pizza">
+        </div>
+        <div class="menu_content">
+          <h3>Margherita Pizza</h3>
+          <p>Classic mozzarella pizza with fresh basil.</p>
+          <div class="menu_price">$12.99</div>
+          <button class="add_btn" data-name="Margherita Pizza" data-price="12.99">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card">
+        <div class="menu_img">
+          <img src="img/Treat so sweet gallery image 3.png" alt="Grilled Chicken Burger">
+        </div>
+        <div class="menu_content">
+          <h3>Grilled Chicken Burger</h3>
+          <p>Served with lettuce, tomato, and special sauce.</p>
+          <div class="menu_price">$10.49</div>
+          <button class="add_btn" data-name="Grilled Chicken Burger" data-price="10.49">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card">
+        <div class="menu_img">
+          <img src="img/Treat an Iftar gallery image 2.png" alt="Caesar Salad">
+        </div>
+        <div class="menu_content">
+          <h3>Caesar Salad</h3>
+          <p>Crisp romaine with creamy Caesar dressing.</p>
+          <div class="menu_price">$8.75</div>
+          <button class="add_btn" data-name="Caesar Salad" data-price="8.75">Add to Order</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="order_summary" id="orderSummary">
+      <p style="text-align:center;color:#666;">No items added yet.</p>
+    </div>
+
+    <form class="order_form" id="orderForm">
+      <div class="form_group">
+        <label>Full Name</label>
+        <input type="text" name="fullName" required>
+      </div>
+
+      <div class="form_group">
+        <label>Email Address</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form_group">
+        <label>Phone</label>
+        <input type="tel" name="phone" required>
+      </div>
+
+      <div class="form_group">
+        <label>Delivery Address</label>
+        <textarea name="address" required></textarea>
+      </div>
+
+      <div class="form_group">
+        <label>Preferred Delivery Time</label>
+        <select name="deliveryTime" required>
+          <option value="">Select a time</option>
+          <option value="asap">As soon as possible</option>
+          <option value="12:00">12:00 PM</option>
+          <option value="12:30">12:30 PM</option>
+          <option value="13:00">1:00 PM</option>
+          <option value="13:30">1:30 PM</option>
+         
+        </select>
+      </div>
+
+      <div class="form_group">
+        <label>Order Details (auto-filled)</label>
+        <textarea id="orderDetails" name="orderDetails" readonly required></textarea>
+      </div>
+
+      <button type="submit" class="submit_btn">Submit Order</button>
+    </form>
+  </div>
+
+  <script>
+    const orderItems = {};
+    const orderSummary = document.getElementById('orderSummary');
+    const orderDetails = document.getElementById('orderDetails');
+
+    document.querySelectorAll('.add_btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.dataset.name;
+        const price = parseFloat(btn.dataset.price);
+
+        if (!orderItems[name]) {
+          orderItems[name] = { price: price, quantity: 1 };
+        } else {
+          orderItems[name].quantity++;
+        }
+
+        updateOrderSummary();
+      });
+    });
+
+    function updateOrderSummary() {
+      orderSummary.innerHTML = '';
+
+      for (const [name, item] of Object.entries(orderItems)) {
+        const div = document.createElement('div');
+        div.classList.add('order_item');
+        div.innerHTML = `
+          <div>${name} - $${item.price.toFixed(2)}</div>
+          <div class="quantity_ctrl">
+            <button class="quantity_btn" onclick="changeQty('${name}', -1)">-</button>
+            <input class="quantity_num" value="${item.quantity}" readonly>
+            <button class="quantity_btn" onclick="changeQty('${name}', 1)">+</button>
+          </div>
+        `;
+        orderSummary.appendChild(div);
+      }
+
+      const lines = Object.entries(orderItems)
+        .map(([name, item]) => `${name} x ${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`);
+      orderDetails.value = lines.length ? lines.join('\n') : '';
+      
+      if (!lines.length) {
+        orderSummary.innerHTML = '<p style="text-align:center;color:#666;">No items added yet.</p>';
+      }
+    }
+
+    function changeQty(name, delta) {
+      if (orderItems[name]) {
+        orderItems[name].quantity += delta;
+        if (orderItems[name].quantity <= 0) delete orderItems[name];
+        updateOrderSummary();
+      }
+    }
+
+    document.getElementById('orderForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Order submitted!\n\n' + orderDetails.value);
+      e.target.reset();
+      Object.keys(orderItems).forEach(k => delete orderItems[k]);
+      updateOrderSummary();
+    });
+  </script>
+</section>
+
+
+
+<!-- treat section stop section stop -->
+
+
+<section class="food_order_section">
+  <style>
+    /* Main Section */
+    .food_order_section {
+        padding: 40px 0;
+    }
+
+    .food_order_container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .food_order_title {
+        text-align: center;
+        color: #0b3857;
+        margin-bottom: 20px;
+    }
+
+    .food_order_intro {
+        text-align: center;
+        color: #444;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Menu Grid */
+    .menu_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .menu_card {
+        border: 1px solid #eee;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+        background: #fff;
+        padding-bottom: 10px;
+    }
+
+    .menu_card:hover {
+        transform: translateY(-4px);
+    }
+
+    .menu_img {
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+    }
+
+    .menu_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .menu_content {
+        padding: 15px;
+    }
+
+    .menu_content h3 {
+        color: #0b3857;
+        margin: 0 0 8px 0;
+        font-size: 18px;
+    }
+
+    .menu_price {
+        font-weight: 700;
+        color: #0b3857;
+        margin-bottom: 12px;
+    }
+
+    .variant_select {
+        margin-bottom: 10px;
+        padding: 6px;
+        width: 100%;
+        font-size: 15px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+    }
+
+    /* Buttons */
+    .add_btn,
+    .submit_btn {
+        display: inline-block;
+        background-color: #0b3857;
+        color: #fff;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    .add_btn:hover,
+    .submit_btn:hover {
+        background-color: #144a8c;
+        transform: translateY(-2px);
+    }
+
+    /* Order Summary */
+    .order_summary {
+        background: #f8f8f8;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .order_item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .quantity_ctrl {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .quantity_btn {
+        background: #0b3857;
+        color: #fff;
+        border: none;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    .quantity_btn:hover {
+        background-color: #144a8c;
+        transform: translateY(-1px);
+    }
+
+    .quantity_num {
+        width: 40px;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        height: 32px;
+        font-size: 15px;
+    }
+
+    /* Form */
+    .order_form {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+    }
+
+    .form_group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: 600;
+        color: #0b3857;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 15px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+        border-color: #0b3857;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(11, 56, 87, 0.1);
+    }
+
+    /* Bank Info */
+    .bank_info {
+        background: #f8f8f8;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        font-size: 14px;
+        color: #333;
+    }
+  </style>
+
+  <div class="food_order_container">
+    <h2 class="food_order_title">Treat an Iftar 2026 – Order Form</h2>
+    <p class="food_order_intro">
+      Join us in supporting our community by ordering delicious meals prepared for our “Treat an Iftar” cause. 
+      Every order helps bring smiles to families this Ramadan.
+    </p>
+
+    <div class="menu_grid">
+      <!-- Food Items -->
+      <div class="menu_card" data-name="Chickpeas" data-price="5.50">
+        <div class="menu_img"><img src="https://picsum.photos/300?random=1" alt="Chickpeas"></div>
+        <div class="menu_content">
+          <h3>Chickpeas</h3>
+          <div class="menu_price">$5.50</div>
+          <button class="add_btn">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card" data-name="Kichuri" data-price="6.00">
+        <div class="menu_img"><img src="https://picsum.photos/300?random=2" alt="Kichuri"></div>
+        <div class="menu_content">
+          <h3>Kichuri</h3>
+          <div class="menu_price">$6.00</div>
+          <button class="add_btn">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card" data-name="Spring Rolls" data-price="4.50">
+        <div class="menu_img"><img src="https://picsum.photos/300?random=3" alt="Spring Rolls"></div>
+        <div class="menu_content">
+          <h3>Spring Rolls</h3>
+          <div class="menu_price">$4.50</div>
+          <button class="add_btn">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card" data-name="Lasagne" data-price="8.50">
+        <div class="menu_img"><img src="https://picsum.photos/300?random=4" alt="Lasagne"></div>
+        <div class="menu_content">
+          <h3>Lasagne</h3>
+          <div class="menu_price">$8.50</div>
+          <button class="add_btn">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card" data-name="Pasta Bake" data-price="7.50">
+        <div class="menu_img"><img src="https://picsum.photos/300?random=5" alt="Pasta Bake"></div>
+        <div class="menu_content">
+          <h3>Pasta Bake</h3>
+          <div class="menu_price">$7.50</div>
+          <button class="add_btn">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card" data-name="Vegetable or Chicken Chow Mein" data-price="9.50">
+        <div class="menu_img"><img src="https://picsum.photos/300?random=6" alt="Chow Mein"></div>
+        <div class="menu_content">
+          <h3>Vegetable or Chicken Chow Mein</h3>
+          <select class="variant_select">
+            <option value="Vegetable">Vegetable</option>
+            <option value="Chicken">Chicken</option>
+          </select>
+          <div class="menu_price">$9.50</div>
+          <button class="add_btn">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card" data-name="Chicken Biriyani" data-price="10.50">
+        <div class="menu_img"><img src="https://picsum.photos/300?random=7" alt="Chicken Biriyani"></div>
+        <div class="menu_content">
+          <h3>Chicken Biriyani</h3>
+          <div class="menu_price">$10.50</div>
+          <button class="add_btn">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card" data-name="Butter Chicken with Pilau Rice" data-price="12.00">
+        <div class="menu_img"><img src="https://picsum.photos/300?random=8" alt="Butter Chicken"></div>
+        <div class="menu_content">
+          <h3>Butter Chicken with Pilau Rice</h3>
+          <div class="menu_price">$12.00</div>
+          <button class="add_btn">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card" data-name="Flavoured Wings" data-price="6.50">
+        <div class="menu_img"><img src="https://picsum.photos/300?random=9" alt="Flavoured Wings"></div>
+        <div class="menu_content">
+          <h3>Flavoured Wings</h3>
+          <div class="menu_price">$6.50</div>
+          <button class="add_btn">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card" data-name="Mojito" data-price="3.50">
+        <div class="menu_img"><img src="https://picsum.photos/300?random=10" alt="Mojito"></div>
+        <div class="menu_content">
+          <h3>Mojito</h3>
+          <div class="menu_price">$3.50</div>
+          <button class="add_btn">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card" data-name="Chocolate Tart" data-price="4.00">
+        <div class="menu_img"><img src="https://picsum.photos/300?random=11" alt="Chocolate Tart"></div>
+        <div class="menu_content">
+          <h3>Chocolate Tart</h3>
+          <div class="menu_price">$4.00</div>
+          <button class="add_btn">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card" data-name="Key Lime Pie" data-price="4.50">
+        <div class="menu_img"><img src="https://picsum.photos/300?random=12" alt="Key Lime Pie"></div>
+        <div class="menu_content">
+          <h3>Key Lime Pie</h3>
+          <div class="menu_price">$4.50</div>
+          <button class="add_btn">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card" data-name="Chocolate Brownies" data-price="3.50">
+        <div class="menu_img"><img src="https://picsum.photos/300?random=13" alt="Chocolate Brownies"></div>
+        <div class="menu_content">
+          <h3>Chocolate Brownies</h3>
+          <div class="menu_price">$3.50</div>
+          <button class="add_btn">Add to Order</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="order_summary" id="orderSummary">
+      <p style="text-align:center;color:#666;">No items added yet.</p>
+    </div>
+
+    <div class="bank_info">
+      <strong>Payment via Bank Transfer:</strong><br>
+      Account Name: Treat an Iftar<br>
+      Account Number: 12345678<br>
+      Sort Code: 12-34-56<br>
+      Reference: Your Name + Order
+    </div>
+
+    <form class="order_form" id="orderForm" method="POST" action="order.php">
+      <div class="form_group"><label>Full Name</label><input type="text" name="fullName" required></div>
+      <div class="form_group"><label>Mobile Number</label><input type="tel" name="mobile" required></div>
+      <div class="form_group"><label>Email Address</label><input type="email" name="email" required></div>
+      <div class="form_group"><label>If this is a gift, recipient's name</label><input type="text" name="recipient"></div>
+      <div class="form_group"><label>Delivery Address (including postcode)</label><textarea name="address" required></textarea></div>
+      <div class="form_group"><label>Delivery Date</label>
+        <select name="deliveryDate" required>
+          <option value="">Select a date</option>
+          <option value="2026-02-21">Saturday 21st February 2026</option>
+          <option value="2026-02-28">Saturday 28th February 2026</option>
+          <option value="2026-03-07">Saturday 7th March 2026</option>
+        </select>
+      </div>
+      <div class="form_group"><label>Allergy Concerns</label><textarea name="allergy"></textarea></div>
+      <div class="form_group"><label>Special Requests</label><textarea name="specialRequests"></textarea></div>
+      <div class="form_group"><label>Order Details (auto-filled)</label><textarea id="orderDetails" name="orderDetails" readonly required></textarea></div>
+      <button type="submit" class="submit_btn">Submit Order</button>
+    </form>
+  </div>
+
+  <script>
+    const orderItems = {};
+    const orderSummary = document.getElementById('orderSummary');
+    const orderDetails = document.getElementById('orderDetails');
+
+    document.querySelectorAll('.add_btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.menu_card');
+        let name = card.dataset.name;
+        const price = parseFloat(card.dataset.price);
+
+        const select = card.querySelector('.variant_select');
+        if(select) name += ' (' + select.value + ')';
+
+        if(!orderItems[name]){
+          orderItems[name] = { price: price, quantity: 1 };
+        } else {
+          orderItems[name].quantity++;
+        }
+        updateOrderSummary();
+      });
+    });
+
+    function updateOrderSummary(){
+      orderSummary.innerHTML = '';
+      let total = 0;
+      for(const [name,item] of Object.entries(orderItems)){
+        total += item.price * item.quantity;
+        const div = document.createElement('div');
+        div.classList.add('order_item');
+        div.innerHTML = `
+          <div>${name}</div>
+          <div class="quantity_ctrl">
+            <button class="quantity_btn" onclick="changeQty('${name}',-1)">-</button>
+            <input class="quantity_num" value="${item.quantity}" readonly>
+            <button class="quantity_btn" onclick="changeQty('${name}',1)">+</button>
+          </div>
+        `;
+        orderSummary.appendChild(div);
+      }
+
+      const lines = Object.entries(orderItems).map(([name,item])=>`${name} x ${item.quantity} - $${(item.price*item.quantity).toFixed(2)}`);
+      orderDetails.value = lines.length ? lines.join('\n') + `\n\nTotal: $${total.toFixed(2)}` : '';
+
+      if(!lines.length) orderSummary.innerHTML = '<p style="text-align:center;color:#666;">No items added yet.</p>';
+    }
+
+    function changeQty(name,delta){
+      if(orderItems[name]){
+        orderItems[name].quantity += delta;
+        if(orderItems[name].quantity<=0) delete orderItems[name];
+        updateOrderSummary();
+      }
+    }
+
+    document.getElementById('orderForm').addEventListener('submit', e=>{
+      e.preventDefault();
+      alert('Order submitted!\n\n' + orderDetails.value);
+      e.target.reset();
+      Object.keys(orderItems).forEach(k=>delete orderItems[k]);
+      updateOrderSummary();
+    });
+  </script>
+</section>
+
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>We Build School | Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+<!-- Blog Page Hero Section Start -->
+
+<section class="newsletter_page_hero">
+  <div class="newsletter_page_hero_bg">
+    <div class="newsletter_page_hero_content">
+      <h1>We Build School</h1>
+      <p>Every Contribution Supports Educational Programmes, Local Projects, and Outreach, with Transparent Reports Showing the Real Impact of Your Support</p>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+
+
+/*  Hero Section start */
+
+.newsletter_page_hero {
+  width: 100%;
+  background-color: #ffffff; 
+}
+
+.newsletter_page_hero_bg {
+  margin: 0 auto;
+  padding: 200px 20px; /* top and bottom spacing */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/We\ Build\ School\ Hero\ image\ \(2\).png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.newsletter_page_hero_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.newsletter_page_hero_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 36px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 28px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 16px;
+  }
+  .newsletter_page_hero_bg {
+    padding: 90px 15px;
+  }
+}
+
+
+</style>
+
+
+ <!-- Newsletter Page Hero Section stop  -->
+
+
+
+<!-- We build school inner section start -->
+
+
+<section class="build-school-wrapper">
+
+
+  <div class="container intro-section">
+    <div class="left-content">
+      <h3 class="section-heading">Building hope, one classroom at a time</h3>
+
+      <p class="intro-text">
+        At Sixteen Foundation, we partner with like-minded organisations to support in the build of small-scale school constructions. With your donations we have been able to work in remote locations in Africa and Bangladesh. The gift of education in such places, does not only benefit the children attending the schools, but the community in its entirety.
+        <br><br>
+        Access to education begins with access to a safe, welcoming environment. Our Build a School initiative focuses on constructing classrooms in remote villages across the world, ensuring every child has the opportunity to learn in a secure environment, free of the changing elements.
+        <br><br>
+        Your contribution literally supports the foundation of education and helps us to lay the groundwork for brighter futures.
+      </p>
+    </div>
+
+    <div class="right-image">
+      <img src="img/We Build School new.jpg" alt="Build School">
+    </div>
+  </div>
+
+  <!-- Four Schools Section -->
+  <div class="container schools-list">
+
+    <!-- Item 1 -->
+    <div class="school-item">
+      <div class="school-text">
+        <h4> <a href=""> School in Mauritania</a> </h4>
+        <p>Supporting a rural community by building a safe learning structure for children in remote areas. We have built Madrasahs in Mauritania.</p>
+      </div>
+      <div class="school-photo">
+        <img src="img/Madrasha Mauritania.jpg" alt="Mauritania School">
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="school-item">
+      <div class="school-text">
+        <h4> <a href="Al-Zikran-School-Donation.html"> School in Sudan</a></h4>
+        <p>In the Summer of 2023, we supported Al Zakirin School in Mehreeba, Sudan, helping rebuild damaged structures and construct a new classroom. Thanks to your donations, students now have a safe, covered space to learn and recite the Qur’an. The community is deeply grateful for this support, ensuring education continues despite challenging conditions.</p>
+      </div>
+      <div class="school-photo">
+        <img src="img/Al Zikarine School feature image.png" alt="Sudan School">
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="school-item">
+      <div class="school-text">
+        <h4><a href=""> School in Mali</a></h4>
+        <p>A new school block designed to support hundreds of children seeking quality education.</p>
+      </div>
+      <div class="school-photo">
+        <img src="img/Al zikran gallery image 1 (1).jpg" alt="Mali School">
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="school-item">
+      <div class="school-text">
+        <h4><a href="Corvarha-Primary-School-Donation.html"> School in Bangladesh</a></h4>
+        <p>In Summer 2022, we supported Corvarha Primary School in Laximbaur Bazar, Bangladesh, demolishing the old building and setting up a temporary classroom so children could continue learning. Your donations helped lay the foundations for a new structure with three classrooms, an office, and a sturdy roof to protect students during the monsoon. The surrounding land allows space for play and learning, with the local community working together to make this rebuild a success.</p>
+      </div>
+      <div class="school-photo">
+        <img src="img/Corvarha Primary School.jpg" alt="Bangladesh School">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Impact Numbers -->
+  <div class="container impact-section">
+    <h3 class="impact-title">Our Impact So Far</h3>
+
+    <div class="impact-grid">
+      <div class="impact-box">
+        <span class="counter" data-target="11">0</span>
+        <p>Schools Built</p>
+      </div>
+
+      <div class="impact-box">
+        <span class="counter" data-target="500">0</span>+
+        <p>Students Benefited</p>
+      </div>
+
+      <div class="impact-box">
+        <span class="counter" data-target="4">0</span>
+        <p>Countries Reached</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===================== CSS ===================== -->
+<style>
+ .build-school-wrapper {
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.section-heading {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #0B3857;
+}
+
+/* Build School Layout */
+.intro-section {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.left-content {
+  flex: 1;
+}
+
+.intro-text {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.right-image {
+  flex: 1;
+}
+
+.right-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+/* Four School Items */
+.schools-list {
+  margin-top: 40px;
+}
+
+.school-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+  border-left: 5px solid #F4CB35;
+  padding-left: 15px;
+}
+
+.school-text h4 {
+  color: #0B3857;
+  font-size: 25px;
+}
+
+.school-text h4 a {
+  text-decoration: none;
+  color: #0B3857;
+}
+
+/* Updated circular images */
+.school-photo img {
+  width: 200px;   /* increased size */
+  height: 200px;  /* increased size */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #F4CB35;
+}
+
+/* Impact Section */
+.impact-section {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.impact-title {
+  color: #0B3857;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.impact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.impact-box {
+  font-size: 22px;
+  text-align: center;
+}
+
+.impact-box .counter {
+  font-size: 48px;
+  font-weight: bold;
+  color: #F4CB35;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .school-photo img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-image img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .school-item {
+    flex-direction: column;
+    text-align: center;
+    border-left: none;
+    border-top: 5px solid #F4CB35;
+    padding-top: 15px;
+  }
+
+  .school-photo img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-heading {
+    font-size: 28px;
+  }
+
+  .intro-text {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+
+
+<script>
+
+const counters = document.querySelectorAll('.counter');
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5 
+};
+
+const animateCounter = (counter) => {
+  const target = +counter.getAttribute('data-target');
+  let count = 0;
+  const speed = 200;
+  const increment = target / speed;
+
+  const updateCount = () => {
+    if (count < target) {
+      count += increment;
+      counter.innerText = Math.ceil(count);
+      requestAnimationFrame(updateCount);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  updateCount();
+};
+
+
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      counters.forEach(counter => animateCounter(counter));
+      observer.unobserve(entry.target); 
+    }
+  });
+};
+
+
+const impactSection = document.querySelector('.impact-section');
+const observer = new IntersectionObserver(observerCallback, options);
+observer.observe(impactSection);
+</script>
+
+<!-- We build school inner section stop -->
+
+
+
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+</body>
+</html>

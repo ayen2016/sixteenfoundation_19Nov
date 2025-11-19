@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+
+
+<style>
+
+/* hero section start */
+
+.individual_events_page_hero_section {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.individual_events_page_hero_bg {
+  margin: 0 auto;
+  padding: 200px 20px;
+  background-image: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,.50)), url('img/AlRawda-Publications.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.individual_events_page_hero_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.individual_events_page_hero_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .individual_events_page_hero_content h1 { font-size: 36px; }
+  .individual_events_page_hero_content p { font-size: 18px; }
+}
+
+@media (max-width: 600px) {
+  .individual_events_page_hero_content h1 { font-size: 28px; }
+  .individual_events_page_hero_content p { font-size: 16px; }
+  .individual_events_page_hero_bg { padding: 90px 15px; }
+}
+
+
+/* hero section stop */
+
+
+
+
+/* individual donation section start */
+
+
+
+.individual_donation_section {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.individual_donation_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.individual_donation_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.individual_donation_text {
+  flex: 1 1 500px;
+ 
+}
+
+.individual_donation_text h2 {
+  font-size: 36px;
+  color: #FDB812;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.individual_donation_text p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.individual_donation_image {
+  flex: 1 1 500px;
+}
+
+.individual_donation_image img {
+  width: 100%;
+  height: auto;
+  /* border-radius: 12px; */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+.individual_donation_bottom p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+.individual_donation_button {
+  text-align: center;
+}
+
+.donation_proceed_btn {
+  display: inline-block;
+  background-color: #0B3857;
+  color: #fff;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(11, 56, 87, 0.2);
+}
+
+.donation_proceed_btn:hover {
+  background-color: #144a8c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(11, 56, 87, 0.3);
+}
+
+@media (max-width: 992px) {
+  .individual_donation_top {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .individual_donation_text,
+  .individual_donation_image {
+    flex: 0 0 auto; /* <-- allow height to be auto according to content */
+    text-align: center;
+  }
+
+  .individual_donation_text h2 {
+    font-size: 28px;
+  }
+
+  .individual_donation_text p,
+  .individual_donation_bottom p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .individual_donation_text h2 {
+    font-size: 24px;
+  }
+
+  .individual_donation_text p,
+  .individual_donation_bottom p {
+    font-size: 15px;
+  }
+}
+
+/* individual donation section stop */
+
+
+/* ==========Text  Gallery Section Start========== */
+
+
+
+.individual_events_page_gallery_section {
+  padding: 60px 20px 80px;
+  background: #f9f9f9;
+}
+
+.individual_events_page_gallery_container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.individual_events_page_gallery_text {
+  flex: 1 1 35%;
+  min-width: 280px;
+ 
+}
+
+.individual_events_page_gallery_text h2 {
+  font-size: 32px;
+  color: #0B3857;
+  margin-bottom: 16px;
+}
+
+.individual_events_page_gallery_text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.individual_events_page_gallery_grid_wrapper {
+  flex: 1 1 60%;
+  min-width: 280px;
+}
+
+.individual_events_page_gallery_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.individual_events_page_gallery_grid img {
+  width: 100%;
+  display: block;
+  /* border-radius: 8px; */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.individual_events_page_gallery_grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox styles */
+#individual_events_page_lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#individual_events_page_lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  /* border-radius: 8px; */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+#individual_events_page_lightbox_close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+  .individual_events_page_gallery_container {
+    flex-direction: column;
+    align-items: center; /* Center everything horizontally */
+    text-align: center;
+    gap: 30px;
+  }
+
+  .individual_events_page_gallery_text {
+    flex: none; /* Let it shrink naturally */
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .individual_events_page_gallery_grid_wrapper {
+    flex: none; /* Let grid wrap naturally */
+    width: 100%;
+  }
+
+  .individual_events_page_gallery_grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    justify-items: center; /* Center grid items */
+  }
+}
+
+@media (max-width: 600px) {
+  .individual_events_page_gallery_section {
+    padding-bottom: 120px; /* more padding to prevent footer overlap */
+  }
+
+  .individual_events_page_gallery_grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    justify-items: center; /* center each image */
+  }
+
+  .individual_events_page_gallery_text {
+    text-align: center;
+    margin-bottom: 20px; /* spacing before grid */
+   
+  }
+
+  .individual_events_page_gallery_grid_wrapper {
+    width: 100%;
+  }
+}
+
+
+/* ==========Text  Gallery Section Stop ========== */
+
+
+
+
+</style>
+
+
+<!-- Blog Section Stop -->
+
+<!-- Events Page Hero Section Start -->
+
+
+  <section class="individual_events_page_hero_section">
+    <div class="individual_events_page_hero_bg">
+      <div class="individual_events_page_hero_content">
+        <h1>Al Rawda Educational Institution</h1>
+        <p>In the Summer of 2021 we supported Al Rawda Educational Institution.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Events Page Hero Section Stop-->
+
+
+<!-- individual donation page section start -->
+
+
+<section class="individual_donation_section">
+  <div class="individual_donation_container">
+    
+    <div class="individual_donation_top">
+      <div class="individual_donation_text">
+        <h2>Thanks to all our donors. <br> This campaign is now closed.</h2>
+        <p>
+          In the Summer of 2021 we supported Al Rawda, an educational institution in London which offers a range of educational courses and programs for people of all ages and walks of life.
+
+We worked alongside the Chief Executive at Al Rawda to continue his range of publications. He went on to compile, produce and distribute the publication of “Prophetic Wellbeing: 40 Hadith on Healthy Living.” These books have been distributed to the local community and stored in the library for students to access and read. The publication alongside others are available to purchase online, we were lucky enough to receive complimentary copies.
+
+The publication has received 5 star reviews by those who have had the opportunity to read and provides some beautiful nuggets for the reader to take away them. We were also fortunate enough for Al Rawda to a include a little dedication note for our beloved parents, which was a lovely gesture.
+
+“For our beloved mother and father of sixteen children:
+always wise in counsel,
+tender in judgement,
+believers in Islam
+and fervent in charity.
+We dedicate, with reverence, these special books.”
+        </p>
+      </div>
+      <div class="individual_donation_image">
+        <img src="img/AlRawda-Publications.jpg" alt="Child Donation Image">
+      </div>
+    </div>
+
+  
+    <!-- <div class="individual_donation_bottom">
+      <p>
+        Join our mission to provide essential resources and opportunities to children who need it the most. Together, we can change lives and build a brighter future.
+      </p>
+    </div>
+
+
+    <div class="individual_donation_button">
+      <a href="#" class="donation_proceed_btn">Proceed for Donation</a>
+    </div> -->
+  </div>
+</section>
+  
+
+
+<!-- individual donation page section stop -->
+
+
+
+<!-- text gallery section start -->
+
+  <section class="individual_events_page_gallery_section">
+    <div class="individual_events_page_gallery_container">
+      <div class="individual_events_page_gallery_text">
+        <h2>Highlights</h2>
+        <p>
+           1. In Summer 2021, Sixteen Foundation supported Al Rawda, an educational institution in London offering courses for all ages. <br> <br>
+
+2. We collaborated with the Chief Executive to produce and distribute “Prophetic Wellbeing: 40 Hadith on Healthy Living.” <br><br>
+
+3. The books were shared with the local community, stored in the library, and are available online, receiving 5-star reviews.
+<br><br>
+
+4. A special dedication was included for the parents of Sixteen Foundation, honoring their guidance and charity.
+        </p>
+      </div>
+      <div class="individual_events_page_gallery_grid_wrapper">
+        <div class="individual_events_page_gallery_grid">
+          
+          <img src="img/Al Rawda image gallery1.png" data-full="img/Al Rawda image gallery1.png" alt="Image 9">
+          <img src="img/AL Rawda image gallery 2.png" data-full="img/AL Rawda image gallery 2.png" alt="Image 9">
+          <img src="img/AL Rawda image qr code.png" data-full="img/AL Rawda image qr code.png" alt="Image 9">
+          
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Custom Lightbox -->
+
+  <div id="individual_events_page_lightbox">
+    <span id="individual_events_page_lightbox_close">&times;</span>
+    <img id="individual_events_page_lightbox_img" src="">
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const images = document.querySelectorAll(".individual_events_page_gallery_grid img");
+      const lightbox = document.getElementById("individual_events_page_lightbox");
+      const lightboxImg = document.getElementById("individual_events_page_lightbox_img");
+      const closeBtn = document.getElementById("individual_events_page_lightbox_close");
+
+      images.forEach(img => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          lightboxImg.src = img.dataset.full;
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+
+
+<!-- text gallery section stop -->
+
+
+
+<!-- Social Links Section Start -->
+
+
+<section class="social_links_section">
+  <div class="social_links_container">
+    <h2>Give a Following </h2>
+    <p>Stay connected  on social media.</p>
+    <div class="social_icons">
+      <a href="https://www.facebook.com/Alrawda.org/" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/al.rawda/?hl=en" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+
+/* Social Links Section */
+.social_links_section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+.social_links_container h2 {
+  font-size: 32px;
+  color: #0B3857;
+  margin-bottom: 10px;
+}
+
+.social_links_container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.social_icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social_icons a {
+  background-color: #0B3857;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social_icons a:hover {
+  background-color: #FDB812;
+  color: #0B3857;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 600px) {
+  .social_links_container h2 {
+    font-size: 24px;
+  }
+
+  .social_icons a {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+
+
+</style>
+
+
+<!-- Social Links Section Stop -->
+
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+</body>
+</html>

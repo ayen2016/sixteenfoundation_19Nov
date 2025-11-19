@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> School Resource | Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+<!-- Blog Page Hero Section Start -->
+
+<section class="newsletter_page_hero">
+  <div class="newsletter_page_hero_bg">
+    <div class="newsletter_page_hero_content">
+      <h1>Student Scholarships </h1>
+      <p>Educate a child and empower a new generation of world leaders.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+
+
+/*  Hero Section start */
+
+.newsletter_page_hero {
+  width: 100%;
+  background-color: #ffffff; 
+}
+
+.newsletter_page_hero_bg {
+  margin: 0 auto;
+  padding: 200px 20px; /* top and bottom spacing */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Student\ scholarship\ header\ image.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.newsletter_page_hero_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.newsletter_page_hero_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 36px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 28px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 16px;
+  }
+  .newsletter_page_hero_bg {
+    padding: 90px 15px;
+  }
+}
+
+
+</style>
+
+
+ <!-- Newsletter Page Hero Section stop  -->
+
+
+
+<!-- We renovate school inner section start -->
+
+
+<!-- ===================== STUDENT SCHOLARSHIP SECTION ===================== -->
+<section class="student-scholarship-wrapper">
+
+  <!-- Banner Section -->
+  <div class="container intro-section">
+    <div class="left-content">
+      <h3 class="section-heading">Empowering Students to Achieve their Dreams</h3>
+      <p class="intro-text">
+        At Sixteen Foundation, education is at the forefront of our organisation. We support young students with financial aid to pursue their education. Your contribution potentially helps to cover the school’s fees and their resources for the duration of their course, or in its entirety.
+        <br> 
+
+          Many talented students face financial barriers that prevent them from pursuing their chosen path. Whether it is low-income families in the UK or orphaned children in Bangladesh, by funding scholarships, you help students unlock their potential and achieve academic and career goals, allowing another child to dare to dream.
+
+      </p>
+    </div>
+
+    <div class="right-image">
+      <img src="img/Educate a child 4.png" alt="Student Scholarship">
+    </div>
+  </div>
+
+  <!-- Main Text Section -->
+  <!-- <div class="container schools-list">
+    <div class="school-item">
+      <div class="school-text">
+        <h4>Supporting Students with Scholarships</h4>
+        <p>
+          Many talented students face financial barriers that prevent them from pursuing their chosen path. Whether it is low-income families in the UK or orphaned children in Bangladesh, by funding scholarships, you help students unlock their potential and achieve academic and career goals, allowing another child to dare to dream.
+        </p>
+      </div>
+      <div class="school-photo">
+        <img src="https://picsum.photos/200?random=52" alt="Scholarship">
+      </div>
+    </div>
+
+    
+    
+    <div class="school-item">
+      <div class="school-text">
+        <h4><a href="Bangladesh-Student-1.html">Student 1 - Bangladesh</a></h4>
+        <p>Read about how the scholarship helped this student pursue education in Bangladesh.</p>
+      </div>
+      <div class="school-photo">
+        <img src="https://picsum.photos/200?random=53" alt="Bangladesh Student">
+      </div>
+    </div>
+
+    <div class="school-item">
+      <div class="school-text">
+        <h4><a href="Bangladesh-Student-2.html">Student 2 - Bangladesh</a></h4>
+        <p>Learn how financial support enabled this student to continue their studies.</p>
+      </div>
+      <div class="school-photo">
+        <img src="https://picsum.photos/200?random=54" alt="Bangladesh Student">
+      </div>
+    </div>
+
+    <div class="school-item">
+      <div class="school-text">
+        <h4><a href="Bangladesh-Student-3.html">Student 3 - Bangladesh</a></h4>
+        <p>Discover how the scholarship made a tangible difference for this student.</p>
+      </div>
+      <div class="school-photo">
+        <img src="https://picsum.photos/200?random=55" alt="Bangladesh Student">
+      </div>
+    </div>
+
+    
+    <div class="school-item">
+      <div class="school-text">
+        <h4><a href="Manchester-Student-1.html">Student 1 - Manchester</a></h4>
+        <p>This student received support to pursue higher education in Manchester.</p>
+      </div>
+      <div class="school-photo">
+        <img src="https://picsum.photos/200?random=56" alt="Manchester Student">
+      </div>
+    </div>
+
+    <div class="school-item">
+      <div class="school-text">
+        <h4><a href="Manchester-Student-2.html">Student 2 - Manchester</a></h4>
+        <p>Scholarship support helped this student overcome financial barriers to education.</p>
+      </div>
+      <div class="school-photo">
+        <img src="https://picsum.photos/200?random=57" alt="Manchester Student">
+      </div>
+    </div>
+
+    
+    <div class="school-item">
+      <div class="school-text">
+        <h4><a href="Lancaster-Student-1.html">Student 1 - Lancaster</a></h4>
+        <p>Read how this student achieved academic goals with scholarship assistance.</p>
+      </div>
+      <div class="school-photo">
+        <img src="https://picsum.photos/200?random=58" alt="Lancaster Student">
+      </div>
+    </div>
+
+    <div class="school-item">
+      <div class="school-text">
+        <h4><a href="Lancaster-Student-2.html">Student 2 - Lancaster</a></h4>
+        <p>This scholarship empowered the student to pursue their chosen academic path.</p>
+      </div>
+      <div class="school-photo">
+        <img src="https://picsum.photos/200?random=59" alt="Lancaster Student">
+      </div>
+    </div>
+
+  </div> -->
+
+
+
+  <!-- Student testimonial section start -->
+
+
+  <!-- ===================== STUDENT SCHOLARSHIP TESTIMONIALS 01 ===================== -->
+<section class="student-testimonials-wrapper-01">
+  <div class="container-01">
+    <h3 class="section-heading-01">Student Testimonials</h3>
+    <p class="intro-text-01">
+      Hear directly from the students whose education you have helped transform through scholarships.
+    </p>
+
+    <!-- Tabs / Navigation -->
+    <div class="testimonial-tabs-01">
+      <button class="tab-btn-01 active" data-tab="1">Bangladesh 1</button>
+      <button class="tab-btn-01" data-tab="2">Bangladesh 2</button>
+      <button class="tab-btn-01" data-tab="3">Bangladesh 3</button>
+      <button class="tab-btn-01" data-tab="4">Manchester 1</button>
+      <button class="tab-btn-01" data-tab="5">Manchester 2</button>
+      <button class="tab-btn-01" data-tab="6">Lancaster 1</button>
+      <button class="tab-btn-01" data-tab="7">Lancaster 2</button>
+    </div>
+
+    <!-- Testimonial Content -->
+    <div class="testimonial-content-01">
+      <!-- Bangladesh Students -->
+      <div class="testimonial-item-01 active" data-tab="1">
+        <img src="img/Podcast 4.jpg" alt="Bangladesh Student" class="testimonial-photo-01">
+        <p>"Receiving this scholarship allowed me to continue my studies and dream bigger than ever. I am so grateful to everyone who supported me."</p>
+        <span class="testimonial-name-01">Student 1, Bangladesh</span>
+      </div>
+
+      <div class="testimonial-item-01" data-tab="2">
+        <img src="img/Podcast 4.jpg" alt="Bangladesh Student" class="testimonial-photo-01">
+        <p>"The scholarship helped me get textbooks and uniforms I couldn't afford before. Now I can focus fully on my education."</p>
+        <span class="testimonial-name-01">Student 2, Bangladesh</span>
+      </div>
+
+      <div class="testimonial-item-01" data-tab="3">
+        <img src="img/Podcast 4.jpg" alt="Bangladesh Student" class="testimonial-photo-01">
+        <p>"Thanks to Sixteen Foundation, I feel encouraged to pursue my goals. This support changed my life."</p>
+        <span class="testimonial-name-01">Student 3, Bangladesh</span>
+      </div>
+
+      <!-- Manchester Students -->
+      <div class="testimonial-item-01" data-tab="4">
+        <img src="img/Podcast 4.jpg" alt="Manchester Student" class="testimonial-photo-01">
+        <p>"I couldn't have afforded my school fees without this scholarship. Now I can focus on learning and excelling."</p>
+        <span class="testimonial-name-01">Student 1, Manchester</span>
+      </div>
+
+      <div class="testimonial-item-01" data-tab="5">
+        <img src="img/Podcast 4.jpg" alt="Manchester Student" class="testimonial-photo-01">
+        <p>"This scholarship gave me access to resources I never had before. It’s a stepping stone towards my future."</p>
+        <span class="testimonial-name-01">Student 2, Manchester</span>
+      </div>
+
+      <!-- Lancaster Students -->
+      <div class="testimonial-item-01" data-tab="6">
+        <img src="img/Podcast 4.jpg" alt="Lancaster Student" class="testimonial-photo-01">
+        <p>"I am thankful for the scholarship support. It allowed me to participate fully in school activities and excel."</p>
+        <span class="testimonial-name-01">Student 1, Lancaster</span>
+      </div>
+
+      <div class="testimonial-item-01" data-tab="7">
+        <img src="img/Podcast 4.jpg" alt="Lancaster Student" class="testimonial-photo-01">
+        <p>"The scholarship helped me access tools and learning materials I otherwise couldn’t afford. Truly life-changing."</p>
+        <span class="testimonial-name-01">Student 2, Lancaster</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+
+const tabButtons01 = document.querySelectorAll('.tab-btn-01');
+const testimonialItems01 = document.querySelectorAll('.testimonial-item-01');
+
+tabButtons01.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const tab = btn.getAttribute('data-tab');
+
+    // Remove active classes
+    tabButtons01.forEach(b => b.classList.remove('active'));
+    testimonialItems01.forEach(item => item.classList.remove('active'));
+
+    // Add active classes
+    btn.classList.add('active');
+    document.querySelector(`.testimonial-item-01[data-tab="${tab}"]`).classList.add('active');
+  });
+});
+
+</script>
+
+
+
+
+  <!-- Student testimonial section stop -->
+
+
+
+  <!-- Impact Numbers -->
+  <div class="container impact-section">
+    <h3 class="impact-title">Our Impact on Students</h3>
+
+    <div class="impact-grid">
+      <div class="impact-box">
+        <span class="counter" data-target="7">0</span>
+        <p>Students Awarded</p>
+      </div>
+
+      <div class="impact-box">
+        <span class="counter" data-target="7">0</span>
+        <p>Scholarships Granted</p>
+      </div>
+
+      <div class="impact-box">
+        <span class="counter" data-target="2">0</span>
+        <p>Countries Reached</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===================== CSS ===================== -->
+<style>
+.student-scholarship-wrapper {
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.section-heading {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #0B3857;
+}
+
+/* Layout */
+.intro-section {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.left-content {
+  flex: 1;
+}
+
+.intro-text {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.right-image {
+  flex: 1;
+}
+
+.right-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+/* School Items / Tabs */
+.schools-list {
+  margin-top: 40px;
+}
+
+.school-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+  border-left: 5px solid #F4CB35;
+  padding-left: 15px;
+}
+
+.school-text h4 {
+  color: #0B3857;
+  font-size: 25px;
+}
+
+.school-text h4 a {
+  text-decoration: none;
+  color: #0B3857;
+}
+
+.school-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #F4CB35;
+}
+
+/* Impact Section */
+.impact-section {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.impact-title {
+  color: #0B3857;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.impact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.impact-box {
+  font-size: 22px;
+  text-align: center;
+}
+
+.impact-box .counter {
+  font-size: 48px;
+  font-weight: bold;
+  color: #F4CB35;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .school-photo img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-image img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .school-item {
+    flex-direction: column;
+    text-align: center;
+    border-left: none;
+    border-top: 5px solid #F4CB35;
+    padding-top: 15px;
+  }
+
+  .school-photo img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-heading {
+    font-size: 28px;
+  }
+
+  .intro-text {
+    font-size: 16px;
+  }
+}
+
+/* student testimonial section start */
+
+
+.student-testimonials-wrapper-01 {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.section-heading-01 {
+  color: #0B3857;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.intro-text-01 {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.testimonial-tabs-01 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tab-btn-01 {
+  background-color: #F4CB35;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.tab-btn-01.active,
+.tab-btn-01:hover {
+  background-color: #0B3857;
+  color: #fff;
+}
+
+.testimonial-content-01 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.testimonial-item-01 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.testimonial-item-01.active {
+  display: flex;
+}
+
+.testimonial-photo-01 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #F4CB35;
+}
+
+.testimonial-name-01 {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #0B3857;
+}
+
+
+/* student testimonial section stop */
+
+
+
+
+
+</style>
+
+<!-- ===================== JS ===================== -->
+<script>
+const counters = document.querySelectorAll('.counter');
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5 
+};
+
+const animateCounter = (counter) => {
+  const target = +counter.getAttribute('data-target');
+  let count = 0;
+  const speed = 200;
+  const increment = target / speed;
+
+  const updateCount = () => {
+    if (count < target) {
+      count += increment;
+      counter.innerText = Math.ceil(count);
+      requestAnimationFrame(updateCount);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  updateCount();
+};
+
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      counters.forEach(counter => animateCounter(counter));
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const impactSection = document.querySelector('.impact-section');
+const observer = new IntersectionObserver(observerCallback, options);
+observer.observe(impactSection);
+</script>
+
+
+
+
+<!-- We build school inner section stop -->
+
+
+
+
+ 
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+</body>
+</html>

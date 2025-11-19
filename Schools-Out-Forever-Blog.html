@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+
+ 
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+
+
+<style>
+
+/* hero section start */
+
+
+.individual_blog_page_hero_section {
+  width: 100%;
+  background-color: #ffffff; 
+  
+}
+
+.individual_blog_page_hero_bg {
+  margin: 0 auto;
+  padding: 200px 20px; /* top and bottom spacing */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Blog\ Header\ image.jpg');
+  background-size: cover;
+  background-position: center;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.individual_blog_page_hero_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.individual_blog_page_hero_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 992px) {
+  .individual_blog_page_hero_content h1 {
+    font-size: 36px;
+  }
+
+  .individual_blog_page_hero_content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .individual_blog_page_hero_content h1 {
+    font-size: 28px;
+  }
+
+  .individual_blog_page_hero_content p {
+    font-size: 16px;
+  }
+
+  .individual_blog_page_hero_bg {
+    padding: 90px 15px;
+  }
+}
+
+/* hero section stop */
+
+
+/* Blog Section Start */
+
+.individual_blog_structure4 {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 1rem; /* reduced padding for better mobile display */
+}
+
+.individual_blog_structure5 {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.individual_blog_structure6 {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.individual_blog_structure6 h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.individual_blog_structure6 p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.individual_blog_structure6 a {
+  background-color: #FDB812;
+  color: #000;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.individual_blog_structure6 a:hover {
+  background-color: #e0a800;
+}
+
+/* Blog Content Section */
+.individual_blog_structure7 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.individual_blog_structure8 {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.individual_blog_structure9 {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.individual_blog_structure10 img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.individual_blog_structure11 h3 {
+  font-size: 1.6rem;
+  margin: 2rem 0 1rem;
+  color: #172F62;
+}
+
+.individual_blog_structure11 p,
+.individual_blog_structure11 ul {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.individual_blog_structure11 ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Share Buttons */
+.individual_blog_structure12 {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.individual_blog_structure12 a {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.individual_blog_structure12 a.facebook { background: #3b5998; }
+.individual_blog_structure12 a.facebook:hover { background: #334f88; }
+.individual_blog_structure12 a.twitter { background: #1da1f2; }
+.individual_blog_structure12 a.twitter:hover { background: #0d95e8; }
+.individual_blog_structure12 a.linkedin { background: #0077b5; }
+.individual_blog_structure12 a.linkedin:hover { background: #00629c; }
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .individual_blog_structure7 {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .individual_blog_structure6 h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  .individual_blog_structure6 p {
+    font-size: 1rem;
+  }
+  .individual_blog_structure4 {
+    padding: 4rem 1rem;
+  }
+  .individual_blog_structure7 {
+    padding: 2rem 1rem;
+  }
+  .individual_blog_structure11 h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .individual_blog_structure6 h1 {
+    font-size: 1.8rem;
+  }
+  .individual_blog_structure6 p {
+    font-size: 0.95rem;
+  }
+  .individual_blog_structure11 h3 {
+    font-size: 1.2rem;
+  }
+  .individual_blog_structure12 a {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .individual_blog_structure4 {
+    padding: 3rem 1rem;
+  }
+  .individual_blog_structure7 {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* blog section stop */
+
+/* blog featuring section start */
+
+
+.individual_blog_page_blogs_featuring_section1 {
+  padding: 20px 20px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.individual_blog_page_blogs_featuring_section1 h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0B3857;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.individual_blog_page_blogs_featuring_section_text {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 50px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.individual_blog_page_blogs_featuring_section1_wrapper {
+  position: relative;
+  padding: 0 60px;
+  margin-bottom: 40px;
+}
+
+.individual_blog_page_blogs_featuring_section1_container {
+  overflow: hidden;
+}
+
+.individual_blog_page_blogs_featuring_section_track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  gap: 24px;
+}
+
+.individual_blog_page_blogs_featuring_section_card {
+  flex: 0 0 calc(33.333% - 16px);
+  background: #fff;
+  /* border-radius: 12px; */
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.individual_blog_page_blogs_featuring_section_card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.individual_blog_page_blogs_featuring_section_card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.individual_blog_page_blogs_featuring_section_card h3 {
+  margin: 16px 16px 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0B3857;
+}
+
+.individual_blog_page_blogs_featuring_section_card p {
+  margin: 0 16px 16px;
+  font-size: 15px;
+  color: #666;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+
+.individual_blog_page_blogs_featuring_section_buttom1,
+.individual_blog_page_blogs_featuring_section_buttom2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0B3857;
+  color: #fff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 10;
+  /* border-radius: 8px; */
+  font-size: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(11, 56, 87, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.individual_blog_page_blogs_featuring_section_buttom1:hover:not(:disabled),
+.individual_blog_page_blogs_featuring_section_buttom2:hover:not(:disabled) {
+  background: #144a8c;
+  box-shadow: 0 4px 12px rgba(11, 56, 87, 0.4);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.individual_blog_page_blogs_featuring_section_buttom1:disabled,
+.individual_blog_page_blogs_featuring_section_buttom2:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.individual_blog_page_blogs_featuring_section_buttom1 svg,
+.individual_blog_page_blogs_featuring_section_buttom2 svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.individual_blog_page_blogs_featuring_section_buttom1 { left: 0; }
+.individual_blog_page_blogs_featuring_section_buttom2 { right: 0; }
+
+
+.individual_blog_page_blogs_featuring_section_more_btn_wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.individual_blog_page_blogs_featuring_section_more_btn {
+  display: inline-block;
+  background-color: #0B3857;
+  color: #fff;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(11, 56, 87, 0.2);
+  margin-bottom: 20px;
+
+}
+
+/* .individual_blog_page_blogs_featuring_section_more_btn:hover {
+  background-color: #144a8c;
+  box-shadow: 0 6px 16px rgba(11, 56, 87, 0.3);
+  transform: translateY(-2px);
+} */
+
+/* === Responsive Design === */
+@media (max-width: 992px) {
+  .individual_blog_page_blogs_featuring_section_card {
+    flex: 0 0 calc(50% - 12px);
+  }
+  .individual_blog_page_blogs_featuring_section_card img {
+    height: 260px;
+  }
+  .individual_blog_page_blogs_featuring_section1 h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .individual_blog_page_blogs_featuring_section_card {
+    flex: 0 0 100%;
+  }
+  .individual_blog_page_blogs_featuring_section_card img {
+    height: 320px;
+  }
+  .individual_blog_page_blogs_featuring_section1_wrapper {
+    padding: 0 20px;
+  }
+  .individual_blog_page_blogs_featuring_section_buttom1,
+  .individual_blog_page_blogs_featuring_section_buttom2 {
+    width: 40px;
+    height: 40px;
+  }
+  .individual_blog_page_blogs_featuring_section_buttom1 svg,
+  .individual_blog_page_blogs_featuring_section_buttom2 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .individual_blog_page_blogs_featuring_section1 h2 {
+    font-size: 24px;
+  }
+}
+
+
+/* Blog featuring section stop */
+
+
+
+</style>
+
+<!-- Blog Section Stop -->
+
+
+
+
+<!-- Blog Page Hero Section Start -->
+
+<section class="individual_blog_page_hero_section">
+  <div class="individual_blog_page_hero_bg">
+    <div class="individual_blog_page_hero_content">
+      <h1>Sixteen Foundation Events</h1>
+      <p>Explore our latest stories, insights, and updates on student-led initiatives and community impact. Stay inspired and informed with our blog posts.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Blog Page Hero Section End -->
+
+
+
+<!-- Blog Post Section Start -->
+
+<div class="individual_blog_structure7" id="blog-post">
+
+  <div class="individual_blog_structure8">
+
+    <article class="individual_blog_structure11">
+
+      <header class="individual_blog_structure8">
+        <div class="individual_blog_structure9">
+          <span>24/10/2022</span> | 
+          <span>6 min read</span> | 
+          <span>Author: Amaya Gulam</span>
+        </div>
+        <div class="individual_blog_structure10">
+          <img src="img/Schools Out Forever Blog.jpg" alt="Sixteen Foundation Events">
+        </div>
+      </header>
+
+      <div class="individual_blog_structure11">
+
+       
+
+        <h3>Schools Out Forever</h3>
+        <p><p>I start walking to school, savouring the crisp Autumn air, scanning the stunning scenery filled with vibrant oranges and reds. Soon the calm silence was disrupted by the cacophony of noise from new students, ready to start a new term of school.</p>
+
+<p>It was 3rd period, and I was just in my own world in Maths while a video played in the background. I heard the video stop, but I didn’t care. I prefer the silence. My head shot up. Bright red lights flooded the classroom; a sharp ear-deafening alarm rung throughout the entire school. It was like the sound amplified as it bounced off walls, heading straight to my ears. My head ached and throbbed with pain. Panic and chaos erupted from my classmates, their faces portraying confusion and fear.</p>
+
+<p>A video started playing. It silenced all the mayhem being emitted from the class.</p>
+
+<p>‘A life-threatening disease is spreading rapidly. It is like nothing we’ve seen before. It has been confirmed the virus is derived from the southern part of Europe, but it has now infiltrated every continent. This virus is deadly and highly contagious; it has killed or permanently affected those who have contracted the virus. We have taken everything into consideration and as our most effective deterrent, the worldwide organisation has decided to put the world on lockdown.’</p>
+
+<p>The final word “Lockdown” circulated in my head. To say the least, I was ecstatic! This means no more waking up early, going to bed early, detentions. I can whizz through my homework in an instant to then be free for the rest of the day.</p>
+
+<p>However, the cacophony of cries and sobs disturbed my train of thought. It seems like everyone had a completely opposite reaction. They were all hugging each other, crying. In my head, I laughed.</p>
+
+<p>We were soon escorted off school premises while staying 2 metres apart and wearing those surgical masks covering every breath we took. I walked extra slow, relishing in the moment as it’d be my last time outside for a while.</p>
+
+<p><strong>Day 1</strong></p>
+
+<p>The first day of lockdown was amazing, like a weekend except this can be for a longer period. This is like a dream come true! I slept in, binged on food all day and pulled an all-nighter. I didn’t even attend or attempt any of my online classwork. Thanks to advanced technology, I could manage talking to my family and friends online. If lockdown keeps going like this, I will never want to go back to the ‘normal’ life.</p>
+
+<p><strong>Day 365 – a year later</strong></p>
+
+<p>As the weeks turned into months, months turned into a year. The walls within my house confined me, forcing me to repeat the same monotonous routine. The streets were silent, only the occasional rainfall would break it. The silence that I faced made me realise how much I missed my family, friends and my old life. I craved the feeling of going outside, being swarmed with people, the sounds of human life. I just felt alone. I’m lonely.</p>
+</p>
+       
+
+        <h3>Share this Post</h3>
+        <div class="individual_blog_structure12">
+          <a href="#" class="facebook">Facebook</a>
+          <a href="#" class="twitter">Twitter</a>
+          <a href="#" class="linkedin">LinkedIn</a>
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+</div>
+
+
+<!-- Blog Post Section End -->
+
+
+
+
+<!-- Blog Featuring section start -->
+
+<div class="individual_blog_page_blogs_featuring_section_wrapper">
+
+<section class="individual_blog_page_blogs_featuring_section1">
+  <h2>OUR LATEST BLOGS</h2>
+  <p class="individual_blog_page_blogs_featuring_section_text">
+    Stay updated with our latest news, stories, and insights on student-led initiatives and community impact.
+  </p>
+
+  <div class="individual_blog_page_blogs_featuring_section1_wrapper">
+    <button class="individual_blog_page_blogs_featuring_section_buttom1 prev" aria-label="Previous">
+      <svg viewBox="0 0 24 24">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+    </button>
+
+    <div class="individual_blog_page_blogs_featuring_section1_container">
+      <div class="individual_blog_page_blogs_featuring_section_track">
+
+        <a href="Sixteen-Foundation-Scholarships-Blog.html" class="individual_blog_page_blogs_featuring_section_card">
+          <img src="img/sixteen foundation scholarship blog.jpg" alt="Blog 1">
+          <h3>Sixteen Foundation <br> Scholarships</h3>
+          <p>With the help of our late parent's inheritance, we have been able to set up a small scale scholarship scheme. This schem...</p>
+        </a>
+        <a href="Teaching-&-Life-In-Middel-East-Blog.html" class="individual_blog_page_blogs_featuring_section_card">
+          <img src="img/Teaching in Middle east blog.jpg" alt="Blog 2">
+          <h3>Teaching & Life in the Middle East</h3>
+          <p>Many Muslims in the UK dream of a better life in the Middle East, better weather, a chance to experience another culture...</p>
+        </a>
+        <a href="Sixteen-Foundation-Volunteers-Blog.html" class="individual_blog_page_blogs_featuring_section_card">
+          <img src="img/sixteen foundation volunteers.jpg" alt="Blog 3">
+          <h3>Sixteen Foundation <br> Volunteers</h3>
+          <p>Sixteen Foundation work with friends and family to run events and ensure that the fundraisers run smoothly. These volunt...</p>
+        </a>
+
+        <a href="Sixteen-Foundation-Causes-Blog.html" class="individual_blog_page_blogs_featuring_section_card">
+          <img src="img/Sixteen Foundation Causes Blog.jpg" alt="Blog 1">
+          <h3>Sixteen Foundation <br>Causes</h3>
+          <p>In Ramadhan 2022 we had the privilege in supporting Darul Ihsan and their continuation to support young orphans...</p>
+        </a>
+        <a href="Teaching-&-Motivation-Blog.html" class="individual_blog_page_blogs_featuring_section_card">
+          <img src="img/Teaching and Motivation Blog.jpg" alt="Blog 2">
+          <h3>Teaching and Motivation</h3>
+          <p>There are a couple of questions which I hear fairly regularly within my classroom during Maths relating to motivation fo...</p>
+        </a>
+        <a href="Empower-Through-Education-Blog.html" class="individual_blog_page_blogs_featuring_section_card">
+          <img src="img/Empower Through Education.jpg" alt="Blog 3">
+          <h3>Empower through Education</h3>
+          <p>In some cases, it is arguable that education broadens a child's horizon and benefits the community and subsequently, the...</p>
+        </a>
+
+        <a href="Education-Matters-Blog.html" class="individual_blog_page_blogs_featuring_section_card">
+          <img src="img/Education Matters Blog.jpg" alt="Blog 3">
+          <h3>Education Matters</h3>
+          <p>Education plays a significant role in every person’s life. It helps build character, opinions and intellect. Each indivi...</p>
+        </a>
+
+        <a href="Tech-&-Educational-Benefits-Blog.html" class="individual_blog_page_blogs_featuring_section_card">
+          <img src="img/Teaching and Educational Benefits Blog.jpg" alt="Blog 3">
+          <h3>Tech and Educational Benefits</h3>
+          <p>Technology has undoubtedly changed the way we learn and teach. It offers resources and access for teachers who can deliv...</p>
+        </a>
+
+        <a href="Sixteen-Foundation-Events-Blog.html" class="individual_blog_page_blogs_featuring_section_card">
+          <img src="img/sixteen foundation blog 3.jpg" alt="Blog 3">
+          <h3>Sixteen Foundation Events</h3>
+          <p>We decided as a collective to set up two events a year. The first event would coincide with Ramadhan and would comprise ...</p>
+        </a>
+
+        <a href="Schools-Out-Forever-Blog.html" class="individual_blog_page_blogs_featuring_section_card">
+          <img src="img/Schools Out Forever Blog.jpg" alt="Blog 3">
+          <h3>School’s Out Forever</h3>
+          <p>I start walking to school, savouring the crisp Autumn air, scanning the stunning scenery filled with vibrant oranges and...</p>
+        </a>
+
+      </div>
+    </div>
+
+    <button class="individual_blog_page_blogs_featuring_section_buttom2 next" aria-label="Next">
+      <svg viewBox="0 0 24 24">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <div class="individual_blog_page_blogs_featuring_section_more_btn_wrapper">
+    <a href="Blog.html">
+      <button class="individual_blog_page_blogs_featuring_section_more_btn">More Blogs</button>
+    </a>
+  </div>
+</section>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.individual_blog_page_blogs_featuring_section_track');
+  const prevBtn = document.querySelector('.individual_blog_page_blogs_featuring_section_buttom1.prev');
+  const nextBtn = document.querySelector('.individual_blog_page_blogs_featuring_section_buttom2.next');
+  const cards = document.querySelectorAll('.individual_blog_page_blogs_featuring_section_card');
+
+  let currentIndex = 0;
+  let visibleCards = 3;
+
+  function updateVisibleCards() {
+    const width = window.innerWidth;
+    if (width < 600) visibleCards = 1;
+    else if (width < 992) visibleCards = 2;
+    else visibleCards = 3;
+    updateSlider();
+  }
+
+  function updateSlider() {
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 24;
+    const moveAmount = (cardWidth + gap) * currentIndex;
+    track.style.transform = `translateX(-${moveAmount}px)`;
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= cards.length - visibleCards;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < cards.length - visibleCards) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+
+  window.addEventListener('resize', updateVisibleCards);
+  updateVisibleCards(); // initial call
+});
+</script>
+
+
+
+
+<!-- Blog Featuring section stop -->
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+
+
+<!-- Podcast Page Hero Section Start -->
+<section class="podcast_page_hero_section">
+  <div class="podcast_page_hero_section_bg">
+    <div class="podcast_page_hero_section_content">
+      <h1>We Collect Donation for Students.</h1>
+      <p>Explore our latest stories, insights, and updates on student-led initiatives and community impact. Stay inspired and informed with our blog posts.</p>
+    </div>
+  </div>
+</section>
+<!-- Podcast Page Hero Section Stop -->
+
+<!-- Podcast Page Donate Section Start -->
+<section class="podcast_page_donate_section">
+  <h2>LET US MAKE THE WORLD BETTER TOGETHER</h2>
+  <p class="podcast_page_section_text">The Prophet Muhammad (PBUH) said: <br> "When a person dies, his deeds come to an end except for three: Sadaqah Jariyah (a continuous charity), knowledge which is beneficial, or a virtuous descendant who prays for him (for the deceased)." — Sahih Muslim 1631 </p>
+
+  <div class="podcast_page_donate_grid">
+
+
+    <!-- Card 1 -->
+    <div class="podcast_page_donate_card">
+      <img src="img/Podcast 1.jpg" alt="Cause 1">
+      <div class="podcast_page_donate_card_content">
+        <h3>Summer Event</h3>
+        <p class="podcast_page_donate_card_description">Lets join together for our Brothers in Gaza. Stand for them with your donation. Lets reach out for a good cause.</p>
+       
+        <button onclick="window.location.href='Summer-Events-Podcast.html'">Watch Now</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="podcast_page_donate_card">
+      <img src="img/Podcast 2.jpg" alt="Cause 2">
+      <div class="podcast_page_donate_card_content">
+        <h3>Ramadan Event</h3>
+        <p class="podcast_page_donate_card_description">This is a sample description of the cause. All cards have the same length of text to keep them uniform visually.</p>
+       
+        <button>Watch now</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="podcast_page_donate_card">
+      <img src="img/Podcast 3.jpg" alt="Cause 3">
+      <div class="podcast_page_donate_card_content">
+        <h3>Experience of Schooling</h3>
+        <p class="podcast_page_donate_card_description">This is a sample description of the cause. All cards have the same length of text to keep them uniform visually.</p>
+       
+        <button>Watch now</button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="podcast_page_donate_card">
+      <img src="img/Podcast 4.jpg" alt="Cause 4">
+      <div class="podcast_page_donate_card_content">
+        <h3>Share your Plans</h3>
+        <p class="podcast_page_donate_card_description">This is a sample description of the cause. All cards have the same length of text to keep them uniform visually.</p>
+      
+        <button>Watch now</button>
+      </div>
+    </div>
+
+    
+
+  </div>
+</section>
+
+
+
+<!-- Podcast Page Donate Section Stop -->
+
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+
+
+</body>
+</html>
+
+
+
+

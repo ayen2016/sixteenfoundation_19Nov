@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100% Donation Policy | Sixteen Foundation</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Header Start -->
+<div id="header-placeholder"></div>
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+<!-- Header End -->
+
+
+<!-- Hero Section Start -->
+<section class="donation_policy_hero">
+  <div class="donation_policy_hero_bg">
+    <div class="donation_policy_hero_content">
+      <h1>100% Donation Policy</h1>
+      <p>Every penny you donate goes directly to the cause — helping those in need without any administrative deductions.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.donation_policy_hero {
+  width: 100%;
+  background-color: #ffffff;
+}
+.donation_policy_hero_bg {
+  margin: 0 auto;
+  padding: 180px 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('img/Donation\ policy.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.donation_policy_hero_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.donation_policy_hero_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .donation_policy_hero_content h1 {
+    font-size: 32px;
+  }
+  .donation_policy_hero_content p {
+    font-size: 17px;
+  }
+  .donation_policy_hero_bg {
+    padding: 100px 15px;
+  }
+}
+</style>
+<!-- Hero Section End -->
+
+
+<!-- Main Content Start -->
+<section class="donation_policy_section">
+  <div class="donation_policy_container">
+
+    <div class="donation_policy_intro">
+      <h2>Our Promise to You</h2>
+      <p>
+        At <strong>Sixteen Foundation</strong>, we operate under a <strong>100% Donation Policy</strong>. This means that
+        <em>every single pound, dollar, or taka you donate</em> is used solely for the charitable projects you intend to support.
+      </p>
+      <p>
+        Our administration, marketing, and operational costs are covered separately through dedicated supporters and corporate sponsors — not from your donations.
+      </p>
+    </div>
+
+    <div class="donation_policy_content">
+      <div class="donation_policy_point">
+        <i class="fa-solid fa-hand-holding-heart"></i>
+        <h3>100% Goes to the Cause</h3>
+        <p>
+          We ensure that every donation you make is used directly to support humanitarian relief, education, food drives, and community development.
+        </p>
+      </div>
+
+      <div class="donation_policy_point">
+        <i class="fa-solid fa-people-group"></i>
+        <h3>Funded by Sponsors</h3>
+        <p>
+          All administrative expenses — including staff, offices, and logistics — are funded through sponsor partnerships and dedicated donors who specifically support our operational costs.
+        </p>
+      </div>
+
+      <div class="donation_policy_point">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Transparency & Accountability</h3>
+        <p>
+          We maintain clear financial reports and project updates to show exactly where your donation goes and how it impacts lives.
+        </p>
+      </div>
+
+      <div class="donation_policy_point">
+        <i class="fa-solid fa-globe"></i>
+        <h3>Global Impact</h3>
+        <p>
+          Your donations reach schools, hospitals, and families in need across multiple countries — bringing sustainable and measurable change.
+        </p>
+      </div>
+    </div>
+
+    <div class="donation_policy_message">
+      <h3>Why 100% Matters</h3>
+      <p>
+        Our 100% donation model builds trust and ensures that your generosity has the maximum possible impact.  
+        Whether it’s rebuilding schools, feeding families, or empowering youth — you can give with full confidence knowing your contribution makes a real difference.
+      </p>
+      <a href="Causes.html" class="donation_policy_btn">Support a Cause</a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.donation_policy_section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+
+.donation_policy_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.donation_policy_intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.donation_policy_intro h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0b3857;
+  margin-bottom: 20px;
+}
+
+.donation_policy_intro p {
+  font-size: 18px;
+  color: #444;
+  max-width: 850px;
+  margin: 0 auto 15px;
+  line-height: 1.7;
+}
+
+/* Points Grid */
+.donation_policy_content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.donation_policy_point {
+  background-color: #f8f9fb;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.donation_policy_point:hover {
+  transform: translateY(-5px);
+}
+
+.donation_policy_point i {
+  font-size: 40px;
+  color: #0b3857;
+  margin-bottom: 15px;
+}
+
+.donation_policy_point h3 {
+  font-size: 22px;
+  color: #0b3857;
+  margin-bottom: 10px;
+}
+
+.donation_policy_point p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Message Section */
+.donation_policy_message {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.donation_policy_message h3 {
+  font-size: 28px;
+  color: #0b3857;
+  margin-bottom: 20px;
+}
+
+.donation_policy_message p {
+  color: #444;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.donation_policy_btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background-color: #0b3857;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.donation_policy_btn:hover {
+  background-color: #092f4a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .donation_policy_intro h2 {
+    font-size: 28px;
+  }
+  .donation_policy_message h3 {
+    font-size: 24px;
+  }
+}
+</style>
+<!-- Main Content End -->
+
+
+<!-- Footer Start -->
+<div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+<!-- Footer End -->
+
+</body>
+</html>

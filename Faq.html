@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FAQ | Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+
+
+<!-- Blog Page Hero Section Start -->
+
+<section class="newsletter_page_hero">
+  <div class="newsletter_page_hero_bg">
+    <div class="newsletter_page_hero_content">
+      <h1>FAQs</h1>
+      <p>Every contribution helps fund educational programs, community support projects, and outreach activities. We provide transparent quarterly reports to show the impact of your support.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+
+
+/* Newsletter Page Hero Section start */
+.newsletter_page_hero {
+  width: 100%;
+  background-color: #ffffff; 
+}
+
+.newsletter_page_hero_bg {
+  margin: 0 auto;
+  padding: 200px 20px; /* top and bottom spacing */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/FAQ\ page\ hero\ section.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.newsletter_page_hero_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.newsletter_page_hero_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 36px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 28px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 16px;
+  }
+  .newsletter_page_hero_bg {
+    padding: 90px 15px;
+  }
+}
+/* Newsletter Page Hero Section stop */
+
+/* Newsletter Page Section start */
+.newsletter_page_section_bg {
+  background-color: #ffffff;
+}
+
+.newsletter_page_section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #0B3857;
+}
+
+.newsletter_page_section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.newsletter_page_section p.section-text {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.newsletter_page_grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 992px) {
+  .newsletter_page_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter_page_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.newsletter_page_card {
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter_page_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.newsletter_page_card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.newsletter_page_card .content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.newsletter_page_card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.newsletter_page_card p.excerpt {
+  flex-grow: 1;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.newsletter_page_card button {
+  background-color: #0B3857;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.newsletter_page_card button a {
+  background-color: #0B3857;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.newsletter_page_card button:hover {
+  background-color: #144a8c;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .newsletter_page_section h2 {
+    font-size: 28px;
+  }
+  .newsletter_page_section p.section-text {
+    font-size: 14px;
+  }
+  .newsletter_page_card p.excerpt {
+    font-size: 16px;
+  }
+}
+
+
+
+
+</style>
+
+<!-- Blog Page Hero Section Stop -->
+
+
+
+<!-- Newsletter page newsletter Section Start  -->
+
+
+<!-- FAQ Section Start -->
+<section class="faq_section_donation_site u-section-2">
+  <div class="faq_section_donation_site_sheet" style="max-width:1200px; margin:0 auto;">
+    <h2 class="faq_section_donation_site_title">Frequently Asked Questions</h2>
+
+    <div class="faq_section_donation_site_accordion">
+      
+      <!-- FAQ Item 1 -->
+      <div class="faq_section_donation_site_item">
+        <a class="faq_section_donation_site_link" aria-controls="faq-1" aria-selected="false">
+          <span class="faq_section_donation_site_link_text">1. How can I donate to the foundation?</span>
+          <span class="faq_section_donation_site_link_icon"><i class="fas fa-plus"></i></span>
+        </a>
+        <div class="faq_section_donation_site_pane" id="faq-1">
+          <div class="faq_section_donation_site_layout">
+            <p>You can donate online via our <strong>Donation Page</strong> using secure payment options including credit/debit cards and PayPal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq_section_donation_site_item">
+        <a class="faq_section_donation_site_link" aria-controls="faq-2" aria-selected="false">
+          <span class="faq_section_donation_site_link_text">2. Is my donation tax-deductible?</span>
+          <span class="faq_section_donation_site_link_icon"><i class="fas fa-plus"></i></span>
+        </a>
+        <div class="faq_section_donation_site_pane" id="faq-2">
+          <div class="faq_section_donation_site_layout">
+            <p>Yes, donations to our foundation are eligible for tax deductions. A receipt will be sent to your email after completing the donation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq_section_donation_site_item">
+        <a class="faq_section_donation_site_link" aria-controls="faq-3" aria-selected="false">
+          <span class="faq_section_donation_site_link_text">3. Can I volunteer for your programs?</span>
+          <span class="faq_section_donation_site_link_icon"><i class="fas fa-plus"></i></span>
+        </a>
+        <div class="faq_section_donation_site_pane" id="faq-3">
+          <div class="faq_section_donation_site_layout">
+            <p>Absolutely! Visit our <strong>Volunteer Page</strong> to learn about current opportunities and how you can get involved in our initiatives.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="faq_section_donation_site_item">
+        <a class="faq_section_donation_site_link" aria-controls="faq-4" aria-selected="false">
+          <span class="faq_section_donation_site_link_text">4. How is my donation used?</span>
+          <span class="faq_section_donation_site_link_icon"><i class="fas fa-plus"></i></span>
+        </a>
+        <div class="faq_section_donation_site_pane" id="faq-4">
+          <div class="faq_section_donation_site_layout">
+            <p>Every donation directly supports our community programs, educational initiatives, and volunteer-led projects. Transparency reports are published quarterly.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="faq_section_donation_site_item">
+        <a class="faq_section_donation_site_link" aria-controls="faq-5" aria-selected="false">
+          <span class="faq_section_donation_site_link_text">5. Can I make a recurring donation?</span>
+          <span class="faq_section_donation_site_link_icon"><i class="fas fa-plus"></i></span>
+        </a>
+        <div class="faq_section_donation_site_pane" id="faq-5">
+          <div class="faq_section_donation_site_layout">
+            <p>Yes! You can set up recurring monthly or annual donations on our <strong>Donation Page</strong> to help sustain our ongoing programs.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Scoped CSS -->
+<style>
+.faq_section_donation_site {
+  background-color: #fdfcf9;
+  padding: 80px 20px;
+  color: #0B3857;
+}
+
+.faq_section_donation_site_title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.faq_section_donation_site_accordion .faq_section_donation_site_link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 20px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+.faq_section_donation_site_accordion .faq_section_donation_site_link:hover {
+  background-color: #0B3857;
+  color: #fff;
+}
+
+.faq_section_donation_site_accordion .faq_section_donation_site_pane {
+  padding: 20px;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+  display: none;
+  background-color: #fff;
+}
+
+.faq_section_donation_site_accordion .faq_section_donation_site_item.active .faq_section_donation_site_pane {
+  display: block;
+}
+
+.faq_section_donation_site_link_icon i {
+  transition: transform 0.3s;
+}
+
+.faq_section_donation_site_item.active .faq_section_donation_site_link_icon i {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  .faq_section_donation_site_title {
+    font-size: 28px;
+  }
+  .faq_section_donation_site_accordion .faq_section_donation_site_link {
+    font-size: 16px;
+  }
+}
+</style>
+
+<!-- Scoped JS -->
+<script>
+const faqItemsDonation = document.querySelectorAll('.faq_section_donation_site_accordion .faq_section_donation_site_item');
+
+faqItemsDonation.forEach(item => {
+  const link = item.querySelector('.faq_section_donation_site_link');
+  link.addEventListener('click', () => {
+    faqItemsDonation.forEach(i => { if(i !== item) i.classList.remove('active'); });
+    item.classList.toggle('active');
+  });
+});
+</script>
+<!-- FAQ Section End -->
+
+
+
+<!-- Newsletter page newsletter Section Stop -->
+
+
+
+
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+
+
+</body>
+</html>

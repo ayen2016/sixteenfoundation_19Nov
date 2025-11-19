@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+
+
+<!-- Blog Page Hero Section Start -->
+
+<section class="home_pg_blog_hero">
+  <div class="home_pg_blog_hero_bg">
+    <div class="home_pg_blog_hero_content">
+      <h1>Our Blog</h1>
+      <p>Explore our latest stories, insights, and updates on student-led initiatives and community impact. Stay inspired and informed with our blog posts.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Blog Page Hero Section Stop -->
+
+
+
+<!-- Home Page Blog Section Start  -->
+
+
+<div class="home_pg_blog_section_bg">
+
+
+<section class="home_pg_blog_section">
+  <h2>OUR LATEST BLOGS</h2>
+  <p class="section-text">Stay updated with our latest news, stories, and insights on student-led initiatives and community impact.</p>
+
+  <div class="home_pg_blog_grid">
+    <!-- Blog Card 1 -->
+
+
+    <div class="home_pg_blog_card">
+      <img src="img/sixteen foundation scholarship blog.jpg" alt="Blog 1">
+      <div class="content">
+        <h3>Sixteen Foundation Scholarships</h3>
+        <p class="excerpt">With the help of our late parent's inheritance, we have been able to set up a small scale scholarship scheme. This schem...</p>
+        <!-- <a href="Sixteen-Foundation-Scholarships-Blog.html"><button>Read More</button></a> -->
+        <button  onclick="window.location.href='Sixteen-Foundation-Scholarships-Blog.html'" >Read</button>
+
+        
+
+
+      </div>
+    </div>
+
+
+    <div class="home_pg_blog_card">
+      <img src="img/Teaching in Middle east blog.jpg" alt="Blog 1">
+      <div class="content">
+        <h3>Teaching and Life in the Middle East</h3>
+        <p class="excerpt">Many Muslims in the UK dream of a better life in the Middle East, better weather, a chance to experience another culture...</p>
+        <!-- <a href="Teaching-&-Life-In-Middel-East-Blog.html"><button>Read More</button></a> -->
+
+         <button  onclick="window.location.href='Teaching-&-Life-In-Middel-East-Blog.html'" >Read</button>
+
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="home_pg_blog_card">
+      <img src="img/sixteen foundation volunteers.jpg" alt="Blog 1">
+      <div class="content">
+        <h3>Sixteen Foundation Volunteers</h3>
+        <p class="excerpt">Sixteen Foundation work with friends and family to run events and ensure that the fundraisers run smoothly. These volunt...</p>
+        <!-- <a href="Sixteen-Foundation-Volunteers-Blog.html"><button>Read More</button></a> -->
+
+         <button  onclick="window.location.href='Sixteen-Foundation-Volunteers-Blog.html'" >Read</button>
+
+
+      </div>
+    </div>
+
+
+
+    <div class="home_pg_blog_card">
+      <img src="img/Sixteen Foundation Causes Blog.jpg" alt="Blog 1">
+      <div class="content">
+        <h3>Sixteen Foundation Causes</h3>
+        <p class="excerpt">In Ramadhan 2022 we had the privilege in supporting Darul Ihsan and their continuation to support young orphans and thei...</p>
+        <!-- <a href="Sixteen-Foundation-Causes-Blog.html"><button>Read More</button></a> -->
+
+         <button  onclick="window.location.href='Sixteen-Foundation-Causes-Blog.html'" >Read</button>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Blog Card 2 -->
+    <div class="home_pg_blog_card">
+      <img src="img/Teaching and Motivation Blog.jpg" alt="Blog 2">
+      <div class="content">
+        <h3>Teaching and Motivation</h3>
+        <p class="excerpt">There are a couple of questions which I hear fairly regularly within my classroom during Maths relating to motivation fo...</p>
+        <!-- <a href="Teaching-&-Motivation-Blog.html"><button>Read More</button></a> -->
+
+         <button  onclick="window.location.href='Teaching-&-Motivation-Blog.html'" >Read</button>
+
+
+      </div>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="home_pg_blog_card">
+      <img src="img/Teaching and Educational Benefits Blog.jpg" alt="Blog 3">
+      <div class="content">
+        <h3>Tech and Educational Benefits</h3>
+        <p class="excerpt">Technology has undoubtedly changed the way we learn and teach. It offers resources and access for teachers who can deliv...</p>
+        <!-- <a href="Tech-&-Educational-Benefits-Blog.html"><button>Read More</button></a> -->
+
+          <button  onclick="window.location.href='Tech-&-Educational-Benefits-Blog.html'" >Read</button>
+      
+      </div>
+    </div>
+
+    
+    <div class="home_pg_blog_card">
+      <img src="img/Empower Through Education.jpg" alt="Blog 4">
+      <div class="content">
+        <h3>Empower through Education</h3>
+        <p class="excerpt">In some cases, it is arguable that education broadens a child's horizon and benefits the community and subsequently, the...</p>
+        <!-- <a href="Empower-Through-Education-Blog.html"><button>Read More</button></a> -->
+
+          <button  onclick="window.location.href='Empower-Through-Education-Blog.html'" >Read</button>
+
+
+
+      </div>
+    </div>
+
+
+     <div class="home_pg_blog_card">
+      <img src="img/Education Matters Blog.jpg" alt="Blog 5">
+      <div class="content">
+        <h3>Education Matters</h3>
+        <p class="excerpt">Education plays a significant role in every person’s life. It helps build character, opinions and intellect. Each indivi...</p>
+        <!-- <a href="Education-Matters-Blog.html"><button>Read More</button></a> -->
+
+          <button  onclick="window.location.href='Education-Matters-Blog.html'" >Read</button>
+
+
+
+      </div>
+    </div>
+
+   
+    <div class="home_pg_blog_card">
+      <img src="img/sixteen foundation blog 3.jpg" alt="Blog 5">
+      <div class="content">
+        <h3>Sixteen Foundation Events</h3>
+        <p class="excerpt">We decided as a collective to set up two events a year. The first event would coincide with Ramadhan and would comprise ...</p>
+        <!-- <a href="Sixteen-Foundation-Events-Blog.html"><button>Read More</button></a> -->
+
+
+          <button  onclick="window.location.href='Sixteen-Foundation-Events-Blog.html'" >Read</button>
+
+
+
+
+      </div>
+    </div>
+
+    
+      <div class="home_pg_blog_card">
+      <img src="img/Schools Out Forever Blog.jpg" alt="Blog 5">
+      <div class="content">
+        <h3>School’s Out Forever</h3>
+        <p class="excerpt">I start walking to school, savouring the crisp Autumn air, scanning the stunning scenery filled with vibrant oranges and...</p>
+        <!-- <a href="Schools-Out-Forever-Blog.html"><button>Read More</button></a> -->
+
+      
+        <button  onclick="window.location.href='Schools-Out-Forever-Blog.html'" >Read</button>
+
+
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+</section>
+
+
+</div>
+
+
+<!-- Home Page Blog Section Stop -->
+
+
+
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+
+
+</body>
+</html>

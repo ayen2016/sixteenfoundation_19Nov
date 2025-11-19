@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+
+ 
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+
+
+<!-- Blog Page Hero Section Start -->
+
+
+<section class="volunteer_page_hero_section">
+  <div class="volunteer_page_hero_section_bg">
+    <div class="volunteer_page_hero_section_content">
+      <h1>Our Volunteers</h1>
+      <p>Explore our latest stories, insights, and updates on student-led initiatives and community impact. Stay inspired and informed with our volunteer activities.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+
+
+/* Volunteer Page Hero Section Start */
+
+.volunteer_page_hero_section {
+  width: 100%;
+  background-color: #ffffff; 
+  /* height: 400px; */
+}
+
+.volunteer_page_hero_section_bg {
+  margin: 0 auto;
+  padding: 200px 20px; /* top and bottom spacing */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Volunteer\ page\ hero\ section\ 2.png');
+  background-size: cover;
+  background-position: center;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.volunteer_page_hero_section_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.volunteer_page_hero_section_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .volunteer_page_hero_section_content h1 {
+    font-size: 36px;
+  }
+
+  .volunteer_page_hero_section_content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .volunteer_page_hero_section_content h1 {
+    font-size: 28px;
+  }
+
+  .volunteer_page_hero_section_content p {
+    font-size: 16px;
+  }
+
+  .volunteer_page_hero_section_bg {
+    padding: 90px 15px;
+  }
+}
+</style>
+
+
+<!-- Hero Section Stop -->
+
+
+
+
+<!-- Volunteer Page Start -->
+
+
+<!-- Volunteer Page - Split Column Style -->
+
+<style>
+/* Container */
+.volunteer_section {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Left Image Column */
+.volunteer_image {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  /* border-radius: 12px; */
+}
+
+.volunteer_image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.volunteer_image img:hover {
+  transform: scale(1.05);
+}
+
+/* Right Text Column */
+.volunteer_text {
+  flex: 1;
+  color: #0B3857;
+}
+
+.volunteer_text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.volunteer_text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Icon List */
+.volunteer_list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.volunteer_list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.volunteer_list svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  fill: #0B3857;
+}
+
+/* Volunteer Button */
+.volunteer_button {
+  display: inline-block;
+  background-color: #0B3857;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  /* border-radius: 6px; */
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+/* .volunteer_button:hover {
+  background-color: #144a8c;
+  transform: translateY(-2px);
+} */
+
+/* Responsive */
+@media (max-width: 992px) {
+  .volunteer_section {
+    flex-direction: column;
+  }
+}
+</style>
+
+<section class="volunteer_section">
+  <!-- Left Column: Image -->
+  <div class="volunteer_image">
+    <img src="img/sixteen foundation volunteers.jpg" alt="Volunteers in action">
+  </div>
+
+
+  <!-- Right Column: Text + Icon List + Button -->
+  <div class="volunteer_text">
+    <h2>Join Our Volunteer Team</h2>
+    <p>We can create brighter futures, together. <br> Volunteering is central to the ethos of Sixteen Foundation. We are building a chain of changemakers, who make a crucial difference to the way we function as an organisation. Every fundraiser, volunteer, donor, partner, sponsor is part of Sixteen Foundation’s journey, helping our vision to create a future of positive change in which every community in the world has hope through education.</p>
+    
+    <ul class="volunteer_list">
+      <li>
+        <!-- <svg viewBox="0 0 512 512"><path d="M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z"/></svg> -->
+        Make a difference to a child’s life, be a changemaker.
+      </li>
+      <li>
+        <!-- <svg viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg> -->
+        Join our team of selfless volunteers, Join our movement.
+      </li>
+      <li>
+        <!-- <svg viewBox="0 0 512 512"><path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112z"/></svg> -->
+        Become a CHANGEMAKER
+      </li>
+    </ul>
+
+    <a href="Contact.html" class="volunteer_button">Become a Volunteer</a>
+  </div>
+</section>
+
+
+
+<!-- Volunteer Page End -->
+
+
+<!-- Featured Change Maker Section start-->
+
+
+<section class="featured_change_maker_section">
+  <div class="container">
+    <h2 class="featured_title">Change Maker of the Month</h2>
+    <p class="featured_subtitle">Celebrating the person who made the biggest impact this month.</p>
+
+    <div class="featured_image_frame">
+      <img src="img/sixteen foundation blog 1.jpg" alt="Change Maker">
+      <div class="frame_decor"></div>
+    </div>
+
+    <h3 class="featured_name">John Doe</h3>
+    <p class="featured_role">Community Volunteer</p>
+  </div>
+</section>
+
+
+
+<style>
+
+
+
+/* Featured Change Maker Section */
+.featured_change_maker_section {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.featured_change_maker_section .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.featured_title {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.featured_subtitle {
+  font-size: 18px;
+  margin-bottom: 50px;
+  color: #666666;
+}
+
+/* Image frame */
+.featured_image_frame {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 20px;
+}
+
+.featured_image_frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 2;
+}
+
+/* Decorative frame (like a ring or outline) */
+.frame_decor {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 3px dashed #f4cb35;
+  z-index: 1;
+  animation: rotate 10s linear infinite;
+}
+
+/* Rotate animation for decoration */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.featured_name {
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.featured_role {
+  font-size: 18px;
+  color: #777777;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .featured_image_frame {
+    width: 180px;
+    height: 180px;
+  }
+
+  .frame_decor {
+    width: 200px;
+    height: 200px;
+    top: -10px;
+    left: -10px;
+  }
+
+  .featured_title {
+    font-size: 28px;
+  }
+
+  .featured_subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .featured_name {
+    font-size: 20px;
+  }
+
+  .featured_role {
+    font-size: 16px;
+  }
+}
+</style>
+
+
+
+
+
+<!-- Featured Change Maker Section start-->
+
+
+
+
+
+<!-- Volunteer Gallery Section -->
+
+
+<style>
+/* Volunteer Image Grid */
+.volunteer_gallery_section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.volunteer_gallery_section h2 {
+  font-size: 32px;
+  color: #0B3857;
+  margin-bottom: 40px;
+}
+
+.volunteer_gallery_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.volunteer_gallery_grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  /* border-radius: 8px; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.volunteer_gallery_grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .volunteer_gallery_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .volunteer_gallery_grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<section class="volunteer_gallery_section">
+  <h2>Our Volunteers in Action</h2>
+  <div class="volunteer_gallery_grid">
+    <img src="img/Vigsa image gallery 1.png" alt="Volunteer 1">
+    <img src="img/Highlight image goals for gaza.png" alt="Volunteer 2">
+    <img src="img/Climb for Change 2025 image gallery 3.png" alt="Volunteer 3">
+    <img src="img/Totes 4 Textbooks picture 2.png" alt="Volunteer 4">
+   
+  </div>
+</section>
+
+
+<!-- Volunteer Gallery Section End -->
+
+
+
+
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+
+ 
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+
+
+<!-- Donation Page Hero Section Start -->
+
+<section class="donation_page_hero_section">
+  <div class="donation_page_hero_section_bg">
+    <div class="donation_page_hero_section_content">
+      <h1>We Collect Donation for Students.</h1>
+      <p>Explore our latest stories, insights, and updates on student-led initiatives and community impact. Stay inspired and informed with our blog posts.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Donation Page Hero Section Stop -->
+
+
+
+<!-- donation page donate section start -->
+
+<section class="donation_pg_donate_section">
+  <h2>LET US MAKE THE WORLD BETTER TOGETHER</h2>
+  <p class="section-text">The Prophet Muhammad (PBUH) said: <br> "When a person dies, his deeds come to an end except for three: Sadaqah Jariyah (a continuous charity), knowledge which is beneficial, or a virtuous descendant who prays for him (for the deceased)." — Sahih Muslim 1631 </p>
+
+  <div class="donation_pg_donate_grid">
+
+
+     <!-- Card 1 -->
+    <!-- <div class="donation_pg_donate_card">
+      <img src="img/Support for Gaza Campaign.jpg" alt="Cause 1">
+      <div class="content">
+        <h3>Support For Gaza</h3>
+        <p class="description">Lets join together for our Brothers in Gaza. Stand for them with your donation. Lets reach out for a good cause.</p>
+        <div class="progress-bar">
+          <div class="progress-bar-inner" style="width: 0%;"></div>
+        </div>
+        <p class="progress-text">Raised £0 of £6,000</p>
+        <button  onclick="window.location.href='Support-For-Gaza.html'" >Read & Donate</button>
+      </div>
+    </div> -->
+
+
+
+
+
+    <!-- Card 1 -->
+    <div class="donation_pg_donate_card">
+      <img src="img/gaza fundrising.jpg" alt="Cause 1">
+      <div class="content">
+        <h3>VIGSA</h3>
+        <p class="description">This is a sample description of the cause. All cards have the same length of text to keep them uniform visually.</p>
+        <div class="progress-bar">
+          <div class="progress-bar-inner" style="width: 150%;"></div>
+        </div>
+        <p class="progress-text">Raised $9,603 of $5,000</p>
+         <button  onclick="window.location.href='VIGSA-Donation.html'" >Read</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="donation_pg_donate_card">
+      <img src="img/Apex Secondary School.jpg" alt="Cause 2">
+      <div class="content">
+        <h3>Apex Secondary School</h3>
+        <p class="description">This is a sample description of the cause. All cards have the same length of text to keep them uniform visually.</p>
+        <div class="progress-bar">
+          <div class="progress-bar-inner" style="width: 86.14%;"></div>
+        </div>
+        <p class="progress-text">Raised £4,307 of £5,000</p>
+        <button  onclick="window.location.href='Apex-Secondary-School-Donation.html'" >Read</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="donation_pg_donate_card">
+      <img src="img/Madrasha Mauritania.jpg" alt="Cause 3">
+      <div class="content">
+        <h3>Madrasha 4 Mauritania</h3>
+        <p class="description">This is a sample description of the cause. All cards have the same length of text to keep them uniform visually.</p>
+        <div class="progress-bar">
+          <div class="progress-bar-inner" style="width: 100%;"></div>
+        </div>
+        <p class="progress-text">Raised £6,185 of £6000</p>
+        <button>Campaign Closed</button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="donation_pg_donate_card">
+      <img src="img/LoteTree-Primary School.jpg" alt="Cause 4">
+      <div class="content">
+        <h3>Lote Tree Primary School</h3>
+        <p class="description">This is a sample description of the cause. All cards have the same length of text to keep them uniform visually.</p>
+        <div class="progress-bar">
+          <div class="progress-bar-inner" style="width: 100%;"></div>
+        </div>
+        <p class="progress-text">Raised $5,316 of $5,000</p>
+         <button  onclick="window.location.href='Lote-Tree-Primary-School-Donation.html'" >Read</button>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="donation_pg_donate_card">
+      <img src="img/home donate 4.jpg" alt="Cause 5">
+      <div class="content">
+        <h3>AL-Zakirin School</h3>
+        <p class="description">This is a sample description of the cause. All cards have the same length of text to keep them uniform visually.</p>
+        <div class="progress-bar">
+          <div class="progress-bar-inner" style="width: 100%;"></div>
+        </div>
+        <p class="progress-text">Raised $7,025 of $5,000</p>
+        <button  onclick="window.location.href='Al-Zikran-School-Donation.html'" >Read</button>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="donation_pg_donate_card">
+      <img src="img/DUJK.jpg" alt="Cause 6">
+      <div class="content">
+        <h3>Darul Uloom Jobeda Khatun</h3>
+        <p class="description">This is a sample description of the cause. All cards have the same length of text to keep them uniform visually.</p>
+        <div class="progress-bar">
+          <div class="progress-bar-inner" style="width: 100%;"></div>
+        </div>
+        <p class="progress-text">Raised $5,525 of $5,000</p> 
+        <button  onclick="window.location.href='Darul-Uloom-Jobeda-Khatun.html'" >Read</button>
+      </div>
+    </div>
+
+      <!-- Card 7 -->
+    <div class="donation_pg_donate_card">
+      <img src="img/Corvarha Primary School.jpg" alt="Cause 6">
+      <div class="content">
+        <h3>Corvarha Primary School</h3>
+        <p class="description">This is a sample description of the cause. All cards have the same length of text to keep them uniform visually.</p>
+        <div class="progress-bar">
+          <div class="progress-bar-inner" style="width: 100%;"></div>
+        </div>
+        <p class="progress-text">Raised $5,041 of $5,000</p>
+        <button  onclick="window.location.href='Corvarha-Primary-School-Donation.html'" >Read</button>
+      </div>
+    </div>
+
+
+     <!-- Card 8 -->
+    <div class="donation_pg_donate_card">
+      <img src="img/Darul Ihsan.jpg" alt="Cause 6">
+      <div class="content">
+        <h3>Darul Ihsan</h3>
+        <p class="description">This is a sample description of the cause. All cards have the same length of text to keep them uniform visually.</p>
+        <div class="progress-bar">
+          <div class="progress-bar-inner" style="width: 100%;"></div>
+        </div>
+        <p class="progress-text">Raised $5,206 of $5,000</p>
+       <button  onclick="window.location.href='Darul-Ihsan-Donation.html'" >Read</button>
+      </div>
+    </div>
+
+
+     <!-- Card 8 -->
+    <div class="donation_pg_donate_card">
+      <img src="img/AlRawda-Publications.jpg" alt="Cause 6">
+      <div class="content">
+        <h3>Al Rawda Educational Institution</h3>
+        <p class="description">This is a sample description of the cause. All cards have the same length of text to keep them uniform visually.</p>
+        <div class="progress-bar">
+          <div class="progress-bar-inner" style="width: 96.18%;"></div>
+        </div>
+        <p class="progress-text">Raised $4,809 of $5,000</p>
+        <button  onclick="window.location.href='Al-Rawda-Educational-Institution-Donation.html'" >Read</button>
+
+      </div>
+    </div>
+
+
+    <!-- Card 9 -->
+    <div class="donation_pg_donate_card">
+      <img src="img/DarulIrfanCause-400x300.jpg" alt="Cause 6">
+      <div class="content">
+        <h3>Darul Irfan Hifzal Qur’an Madrasah</h3>
+        <p class="description">This is a sample description of the cause. All cards have the same length of text to keep them uniform visually.</p>
+        <div class="progress-bar">
+          <div class="progress-bar-inner" style="width: 100%;"></div>
+        </div>
+        <p class="progress-text">Raised £3,321 of £2,000</p>
+        <button  onclick="window.location.href='Darul-Irfan-Hifzal-Qur’an-Madrasah.html'" >Read</button>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+<!-- 
+  <div class="donation_pg_donate_sec_more_btn_wrapper">
+    <a href="Blog.html"> <button class="donation_pg_blog_more_btn">Find Causes</button> </a>
+  </div> -->
+
+</section>
+
+<!-- donation page donate section stop -->
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+
+</body>
+</html>
+
+
+
+

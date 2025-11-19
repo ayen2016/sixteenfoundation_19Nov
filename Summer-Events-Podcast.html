@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+ 
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+
+
+
+<style>
+
+/* hero section start */
+
+
+
+.individual_events_page_hero_section {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.individual_events_page_hero_bg {
+  margin: 0 auto;
+  padding: 200px 20px;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/Podcast\ 1.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.individual_events_page_hero_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.individual_events_page_hero_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .individual_events_page_hero_content h1 { font-size: 36px; }
+  .individual_events_page_hero_content p { font-size: 18px; }
+}
+
+@media (max-width: 600px) {
+  .individual_events_page_hero_content h1 { font-size: 28px; }
+  .individual_events_page_hero_content p { font-size: 16px; }
+  .individual_events_page_hero_bg { padding: 90px 15px; }
+}
+
+
+/* hero section stop */
+
+
+
+/* Individual Donation Section Start */
+
+.individual_donation_section {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.individual_donation_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.individual_donation_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.individual_donation_text {
+  flex: 1 1 500px;
+}
+
+.individual_donation_text h2 {
+  font-size: 36px;
+  color: #0B3857;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.individual_donation_text p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Video Wrapper */
+.individual_donation_video_wrapper {
+  position: relative;
+  flex: 1 1 500px; /* flex-basis for desktop */
+  cursor: pointer;
+}
+
+.individual_donation_video_thumbnail {
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: block;
+}
+
+.individual_donation_video_play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: #fff;
+  background: rgba(11, 56, 87, 0.7);
+  border: none;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.individual_donation_video_play:hover {
+  background: rgba(11, 56, 87, 0.9);
+}
+
+.individual_donation_video {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: none; /* initially hidden */
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .individual_donation_top {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .individual_donation_text,
+  .individual_donation_video_wrapper {
+    flex: 0 0 auto; /* allow shrinking */
+    width: 100%;   /* full width on mobile */
+    text-align: center;
+  }
+
+  .individual_donation_text h2 {
+    font-size: 28px;
+  }
+
+  .individual_donation_text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .individual_donation_top {
+    gap: 20px; /* reduce extra spacing */
+  }
+
+  .individual_donation_text h2 {
+    font-size: 24px;
+  }
+
+  .individual_donation_text p {
+    font-size: 15px;
+  }
+}
+
+/* Individual Donation Section Stop */
+
+
+
+
+</style>
+
+<!-- Blog Section Stop -->
+
+
+<!-- Events Page Hero Section Start -->
+
+
+  <section class="individual_events_page_hero_section">
+    <div class="individual_events_page_hero_bg">
+      <div class="individual_events_page_hero_content">
+        <h1>Summer Event</h1>
+        <p>Explore our latest stories, insights, and updates on student-led initiatives and community impact. Stay inspired and informed with our blog posts.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Events Page Hero Section Stop-->
+
+
+<!-- Individual Donation Page Section Start -->
+
+<!-- Individual Donation Page Section Start -->
+<section class="individual_donation_section">
+  <div class="individual_donation_container">
+    
+    <div class="individual_donation_top">
+      <div class="individual_donation_text">
+        <h2>Summer Events Podcast</h2>
+        <p>
+          Your contribution can bring education, food, and hope to children in Gaza. Every donation makes a difference and empowers young lives. We are collecting donations to provide essential aid and support to those affected by the ongoing crisis. Your generosity can help us deliver food, medical supplies, and educational resources to children and families in desperate need. Together, we can make a significant impact and bring hope to those who need it most.
+        </p>
+      </div>
+
+      <div class="individual_donation_video_wrapper">
+        <img src="img/Podcast Thumbnil.bmp" alt="Video Thumbnail" class="individual_donation_video_thumbnail">
+        <button class="individual_donation_video_play">&#9654;</button>
+        <video class="individual_donation_video" controls>
+          <source src="video/Podcast Video.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const wrapper = document.querySelector('.individual_donation_video_wrapper');
+  const video = wrapper.querySelector('.individual_donation_video');
+  const playBtn = wrapper.querySelector('.individual_donation_video_play');
+  const thumbnail = wrapper.querySelector('.individual_donation_video_thumbnail');
+
+  playBtn.addEventListener('click', () => {
+    video.style.display = 'block';        // Show video
+    thumbnail.style.display = 'none';     // Hide thumbnail
+    playBtn.style.display = 'none';       // Hide play button
+    video.play().catch(err => console.log('Video play blocked:', err));
+  });
+});
+
+</script>
+
+
+
+<!-- Individual Donation Page Section Stop -->
+
+
+<!-- Individual Donation Page Section Stop -->
+
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A–Z Donation Ideas | Sixteen Foundation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<div id="header-placeholder"></div>
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+<!-- Hero Section -->
+<section class="az_donation_hero">
+  <div class="az_donation_hero_bg">
+    <div class="az_donation_hero_content">
+      <h1>A–Z Donation Ideas</h1>
+      <p>Explore creative and meaningful ways to contribute — from small gestures to large-scale projects — every action brings us closer to a better future.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.az_donation_hero {
+  width: 100%;
+  background-color: #ffffff;
+}
+.az_donation_hero_bg {
+  padding: 200px 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/1600/800?random=1');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.az_donation_hero_content h1 {
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.az_donation_hero_content p {
+  font-size: 20px;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .az_donation_hero_content h1 { font-size: 32px; }
+  .az_donation_hero_content p { font-size: 16px; }
+  .az_donation_hero_bg { padding: 100px 15px; }
+}
+</style>
+
+<!-- A-Z Donation Ideas Section -->
+<section class="az_donation_section">
+  <div class="az_donation_container">
+    <div class="az_donation_intro">
+      <h2 class="az_donation_title">Creative Ways to Give Back</h2>
+      <p class="az_donation_subtitle">
+        Whether you want to start small or organize something big, here are inspiring ideas to make a difference — from A to Z.
+      </p>
+    </div>
+
+    <div class="az_donation_grid">
+
+      <!-- Repeat 26 cards -->
+      <!-- Each card has a random image from Picsum -->
+      <!-- You can replace any image with a specific one if desired -->
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=2" alt="Afternoon Tea Fundraiser">
+        <h3>A — Afternoon Tea Fundraiser</h3>
+        <p>Host a friendly tea party and invite donations for a cause that matters.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=3" alt="Birthday Giving">
+        <h3>B — Birthday Giving</h3>
+        <p>Dedicate your birthday to raise funds instead of receiving gifts.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=4" alt="Charity Walk">
+        <h3>C — Charity Walk or Cycle</h3>
+        <p>Get active! Organize a sponsored walk or cycle for your favorite campaign.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=5" alt="Dress Down Day">
+        <h3>D — Dress Down Day</h3>
+        <p>Let your office or school wear casuals for a day — with a small donation.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=6" alt="Eco Challenge">
+        <h3>E — Eco Challenge</h3>
+        <p>Take up an eco-friendly challenge and raise funds for sustainability projects.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=7" alt="Food Drive">
+        <h3>F — Food Drive</h3>
+        <p>Collect and donate food items to support local families or shelters.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=8" alt="Games Night">
+        <h3>G — Games Night</h3>
+        <p>Host a games evening with entry donations going towards a school project.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=9" alt="Helping Hands">
+        <h3>H — Helping Hands</h3>
+        <p>Volunteer your time to clean, paint, or repair community spaces.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=10" alt="Iftar Sponsorship">
+        <h3>I — Iftar Sponsorship</h3>
+        <p>Support our Ramadan campaign — Treat an Iftar and feed those in need.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=11" alt="Jummah Donation">
+        <h3>J — Jummah Donation</h3>
+        <p>Make a small weekly Jummah contribution to ongoing charity work.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=12" alt="Knowledge Drive">
+        <h3>K — Knowledge Drive</h3>
+        <p>Donate books or organize learning sessions for children in underfunded schools.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=13" alt="Local Business Support">
+        <h3>L — Local Business Support</h3>
+        <p>Partner with a business to donate a small percentage of sales for charity.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=14" alt="Monthly Donation">
+        <h3>M — Monthly Donation</h3>
+        <p>Set up a small recurring donation — even a little goes a long way.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=15" alt="Neighbourhood Clean-Up">
+        <h3>N — Neighbourhood Clean-Up</h3>
+        <p>Gather volunteers to beautify your community while promoting giving back.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=16" alt="Online Fundraiser">
+        <h3>O — Online Fundraiser</h3>
+        <p>Start a digital campaign and share your story to raise awareness and funds.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=17" alt="Plant a Tree">
+        <h3>P — Plant a Tree</h3>
+        <p>Donate or plant trees in memory of loved ones to help the environment.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=18" alt="Quiz Night">
+        <h3>Q — Quiz Night</h3>
+        <p>Organize a community quiz — fun, competitive, and all for a good cause!</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=19" alt="Ramadan Giving">
+        <h3>R — Ramadan Giving</h3>
+        <p>Support our Ramadan campaigns — Iftar, food packs, and community support.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=20" alt="School Renovation Support">
+        <h3>S — School Renovation Support</h3>
+        <p>Contribute to renovating schools and empowering future generations.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=21" alt="Treat an Iftar">
+        <h3>T — Treat an Iftar</h3>
+        <p>Order special meals to share kindness and joy during Ramadan.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=22" alt="Uniform Fund">
+        <h3>U — Uniform Fund</h3>
+        <p>Help provide school uniforms for children from low-income families.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=23" alt="Volunteer Drive">
+        <h3>V — Volunteer Drive</h3>
+        <p>Encourage friends and family to volunteer their time for good causes.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=24" alt="Water Well Project">
+        <h3>W — Water Well Project</h3>
+        <p>Support building wells in water-scarce areas around the world.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=25" alt="Exercise Challenge">
+        <h3>X — eXercise Challenge</h3>
+        <p>Run, walk, or cycle for charity goals and share your progress online.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=26" alt="Youth Empowerment">
+        <h3>Y — Youth Empowerment</h3>
+        <p>Invest in education and training programs for young people.</p>
+      </div>
+
+      <div class="az_donation_card">
+        <img src="https://picsum.photos/400/250?random=27" alt="Zakat & Sadaqah">
+        <h3>Z — Zakat & Sadaqah</h3>
+        <p>Fulfil your obligation by supporting those most in need through verified programs.</p>
+      </div>
+    </div>
+
+    <div class="az_donation_cta">
+      <a href="donate.html" class="az_donation_btn">Start Donating</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.az_donation_section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+.az_donation_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.az_donation_intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.az_donation_title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0B3857;
+  margin-bottom: 15px;
+}
+.az_donation_subtitle {
+  font-size: 18px;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.az_donation_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.az_donation_card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+.az_donation_card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+.az_donation_card h3 {
+  color: #0B3857;
+  font-size: 18px;
+  margin: 15px 20px 10px;
+}
+.az_donation_card p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 20px 20px;
+}
+.az_donation_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+.az_donation_cta {
+  text-align: center;
+  margin-top: 50px;
+}
+.az_donation_btn {
+  display: inline-block;
+  background-color: #0B3857;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 14px 40px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+.az_donation_btn:hover {
+  background-color: #144a8c;
+}
+@media (max-width: 768px) {
+  .az_donation_title { font-size: 30px; }
+  .az_donation_subtitle { font-size: 16px; }
+  .az_donation_card img { height: 160px; }
+}
+</style>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+</body>
+</html>

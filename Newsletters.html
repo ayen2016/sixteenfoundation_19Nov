@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+
+
+<!-- Blog Page Hero Section Start -->
+
+<section class="newsletter_page_hero">
+  <div class="newsletter_page_hero_bg">
+    <div class="newsletter_page_hero_content">
+      <h1>Newsletters</h1>
+      <p>Discover inspiring stories, recent activities, and updates from our community — all presented in a timeless, newspaper-style layout.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+
+
+/* Newsletter Page Hero Section start */
+.newsletter_page_hero {
+  width: 100%;
+  background-color: #ffffff; 
+}
+
+.newsletter_page_hero_bg {
+  margin: 0 auto;
+  padding: 200px 20px; /* top and bottom spacing */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Newsletter\ page\ hero\ image.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.newsletter_page_hero_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.newsletter_page_hero_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 36px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 28px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 16px;
+  }
+  .newsletter_page_hero_bg {
+    padding: 90px 15px;
+  }
+}
+/* Newsletter Page Hero Section stop */
+
+/* Newsletter Page Section start */
+.newsletter_page_section_bg {
+  background-color: #ffffff;
+}
+
+.newsletter_page_section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #0B3857;
+}
+
+.newsletter_page_section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.newsletter_page_section p.section-text {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.newsletter_page_grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 992px) {
+  .newsletter_page_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter_page_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.newsletter_page_card {
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter_page_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.newsletter_page_card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.newsletter_page_card .content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.newsletter_page_card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.newsletter_page_card p.excerpt {
+  flex-grow: 1;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.newsletter_page_card button {
+  background-color: #0B3857;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.newsletter_page_card button a {
+  background-color: #0B3857;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.newsletter_page_card button:hover {
+  background-color: #144a8c;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .newsletter_page_section h2 {
+    font-size: 28px;
+  }
+  .newsletter_page_section p.section-text {
+    font-size: 14px;
+  }
+  .newsletter_page_card p.excerpt {
+    font-size: 16px;
+  }
+}
+
+
+
+
+</style>
+
+<!-- Blog Page Hero Section Stop -->
+
+
+<!-- Jump to Year Buttons Section -->
+
+<!-- Jump to Year Buttons Section -->
+<section class="newsletter_year_nav">
+  <div class="newsletter_year_nav_container">
+    <h2>Biannual Newsletter</h2>
+    <div class="year_buttons">
+      <a href="#year2021" class="year_btn">2021</a>
+      <a href="#year2022" class="year_btn">2022</a>
+      <a href="#year2023" class="year_btn">2023</a>
+      <a href="#2024" class="year_btn">2024</a>
+      <a href="#year2025" class="year_btn">2025</a>
+      <a href="#year2026" class="year_btn">2026</a>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Year Buttons Section (non-sticky) */
+.newsletter_year_nav {
+  background: #f9f9f9;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.newsletter_year_nav_container h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #0B3857;
+}
+
+.year_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.year_btn {
+  padding: 10px 16px;
+  background: #0B3857;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+  white-space: nowrap; /* keep button text on one line */
+}
+
+.year_btn:hover {
+  background: #144a8c;
+  transform: translateY(-2px);
+}
+
+/* Responsive: wrap buttons instead of full-width stack */
+@media (max-width: 600px) {
+  .year_buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .year_btn {
+    flex: 0 1 auto; /* allow buttons to shrink nicely */
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+</style>
+
+
+<!-- Jump to Year Buttons Section Stop -->
+
+
+
+
+<!-- Newsletter page newsletter Section Start  -->
+
+
+<section class="newsletter_showcase_section">
+  <div class="newsletter_showcase_container">
+    <h2 class="newsletter_title">The Sixteen Foundation Newsletter</h2>
+    <p class="newsletter_intro">Catch up with our latest stories, events, and updates — presented in a timeless newspaper style.</p>
+
+    <div class="newsletter_showcase">
+
+      <!-- Feature Story (large lead) -->
+      <article class="newsletter_lead">
+        <img src="img/A guy reading newspaper.png" alt="Feature Story">
+        <div class="lead_content">
+          <h3>Empowering Communities Through Education</h3>
+          <p>Our ongoing mission to educate children across the globe continues to inspire change — one classroom at a time...</p>
+          <button onclick="window.location.href='newsletter-education.html'">Read Full Story</button>
+        </div>
+      </article>
+
+      <!-- Secondary stories (like newspaper columns) -->
+      <div class="newsletter_columns">
+
+        <article class="newsletter_item">
+          <h4>Changemaker Spotlight</h4>
+          <p>Meet our remarkable volunteers whose dedication makes every project possible — their passion drives impact worldwide.</p>
+          <button onclick="window.location.href='newsletter-volunteers.html'">Read More</button>
+        </article>
+
+        <article class="newsletter_item">
+          <h4>Beneficiary Spotlight</h4>
+          <p>A closer look at our progress this quarter, featuring new community programs and partnership highlights.</p>
+          <button onclick="window.location.href='newsletter-report.html'">Read More</button>
+        </article>
+
+        <article class="newsletter_item">
+          <h4>Success Spotlight</h4>
+          <p>From charity drives to youth empowerment sessions, explore the memorable events that shaped our recent months.</p>
+          <button onclick="window.location.href='newsletter-events.html'">Read More</button>
+        </article>
+
+       
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+
+.newsletter_showcase_section {
+  background-color: #fdfcf9;
+  /* font-family: 'Georgia', serif; */
+  color: #0B3857;
+  padding: 80px 20px;
+}
+
+.newsletter_showcase_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newsletter_title {
+  /* font-family: 'Times New Roman', Times, serif; */
+  text-align: center;
+  font-size: 38px;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.newsletter_intro {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Lead Story */
+.newsletter_lead {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.newsletter_lead img {
+  width: 100%;
+  max-width: 480px;
+  object-fit: cover;
+} 
+
+.lead_content {
+  padding: 20px;
+  flex: 1;
+}
+
+.lead_content h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.lead_content p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Columns below */
+.newsletter_columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.newsletter_item {
+  background: #fff;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter_item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.newsletter_item h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #172f62;
+}
+
+.newsletter_item p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Keep button styling same as blog */
+.newsletter_item button,
+.lead_content button {
+  background-color: #0B3857;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.newsletter_item button:hover,
+.lead_content button:hover {
+  background-color: #144a8c;
+  transform: translateY(-2px);
+}
+
+/* Responsive layout */
+@media (max-width: 992px) {
+  .newsletter_columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .newsletter_lead {
+    flex-direction: column;
+  }
+  .newsletter_columns {
+    grid-template-columns: 1fr;
+  }
+  .newsletter_title {
+    font-size: 30px;
+  }
+}
+
+
+
+</style>
+
+
+<!-- Newsletter page newsletter Section Stop -->
+
+
+<!-- Annual section  -->
+
+<section  id="2024" class="newsletter-section">
+  <h1>Newsletter 2024</h1>
+</section>
+
+<style>
+
+.newsletter-section {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  height: 100px;           /* adjust height as needed */
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.newsletter-section h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+
+</style>
+
+
+<!-- Annual section stop -->
+
+
+
+<section class="newsletter_showcase_section">
+  <div class="newsletter_showcase_container">
+    <h2 class="newsletter_title">The Sixteen Foundation Newsletter</h2>
+    <p class="newsletter_intro">Catch up with our latest stories, events, and updates — presented in a timeless newspaper style.</p>
+
+    <div class="newsletter_showcase">
+
+      <!-- Feature Story (large lead) -->
+      <article class="newsletter_lead">
+        <img src="img/A guy reading newspaper.png" alt="Feature Story">
+        <div class="lead_content">
+          <h3>Empowering Communities Through Education</h3>
+          <p>Our ongoing mission to educate children across the globe continues to inspire change — one classroom at a time...</p>
+          <button onclick="window.location.href='newsletter-education.html'">Read Full Story</button>
+        </div>
+      </article>
+
+      <!-- Secondary stories (like newspaper columns) -->
+       <div class="newsletter_columns">
+
+        <article class="newsletter_item">
+          <h4>Changemaker Spotlight</h4>
+          <p>Meet our remarkable volunteers whose dedication makes every project possible — their passion drives impact worldwide.</p>
+          <button onclick="window.location.href='newsletter-volunteers.html'">Read More</button>
+        </article>
+
+        <article class="newsletter_item">
+          <h4>Beneficiary Spotlight</h4>
+          <p>A closer look at our progress this quarter, featuring new community programs and partnership highlights.</p>
+          <button onclick="window.location.href='newsletter-report.html'">Read More</button>
+        </article>
+
+        <article class="newsletter_item">
+          <h4>Success Spotlight</h4>
+          <p>From charity drives to youth empowerment sessions, explore the memorable events that shaped our recent months.</p>
+          <button onclick="window.location.href='newsletter-events.html'">Read More</button>
+        </article>
+
+       
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+
+.newsletter_showcase_section {
+  background-color: #fdfcf9;
+  /* font-family: 'Georgia', serif; */
+  color: #0B3857;
+  padding: 80px 20px;
+}
+
+.newsletter_showcase_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newsletter_title {
+  /* font-family: 'Times New Roman', Times, serif; */
+  text-align: center;
+  font-size: 38px;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.newsletter_intro {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Lead Story */
+.newsletter_lead {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.newsletter_lead img {
+  width: 100%;
+  max-width: 480px;
+  object-fit: cover;
+} 
+
+.lead_content {
+  padding: 20px;
+  flex: 1;
+}
+
+.lead_content h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.lead_content p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Columns below */
+.newsletter_columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.newsletter_item {
+  background: #fff;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter_item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.newsletter_item h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #172f62;
+}
+
+.newsletter_item p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Keep button styling same as blog */
+.newsletter_item button,
+.lead_content button {
+  background-color: #0B3857;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.newsletter_item button:hover,
+.lead_content button:hover {
+  background-color: #144a8c;
+  transform: translateY(-2px);
+}
+
+/* Responsive layout */
+@media (max-width: 992px) {
+  .newsletter_columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .newsletter_lead {
+    flex-direction: column;
+  }
+  .newsletter_columns {
+    grid-template-columns: 1fr;
+  }
+  .newsletter_title {
+    font-size: 30px;
+  }
+}
+
+
+
+</style>
+
+
+<!-- Newsletter page newsletter Section Stop -->
+
+
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+</body>
+</html>
